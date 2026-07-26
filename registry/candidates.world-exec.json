@@ -1,0 +1,1932 @@
+[
+ {
+  "source-id": "gov-afg-exec",
+  "name": "Government of Islamic Emirate of Afghanistan",
+  "country": "AF",
+  "country-iso3": "AFG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://alemarahenglish.af/",
+  "ooyake-unit": "gov.afg.executive"
+ },
+ {
+  "source-id": "gov-ago-exec",
+  "name": "Angola",
+  "country": "AO",
+  "country-iso3": "AGO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.governo.gov.ao/",
+  "ooyake-unit": "gov.ago"
+ },
+ {
+  "source-id": "gov-alb-exec",
+  "name": "Albania",
+  "country": "AL",
+  "country-iso3": "ALB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.kryeministria.al/en/",
+  "ooyake-unit": "gov.alb"
+ },
+ {
+  "source-id": "gov-and-exec",
+  "name": "Executive Council of Andorra",
+  "country": "AD",
+  "country-iso3": "AND",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.govern.ad",
+  "ooyake-unit": "gov.and.executive"
+ },
+ {
+  "source-id": "gov-are-exec",
+  "name": "United Arab Emirates",
+  "country": "AE",
+  "country-iso3": "ARE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://u.ae",
+  "ooyake-unit": "gov.are"
+ },
+ {
+  "source-id": "gov-arg-exec",
+  "name": "Government of Argentina",
+  "country": "AR",
+  "country-iso3": "ARG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.casarosada.gob.ar/",
+  "ooyake-unit": "gov.arg.executive"
+ },
+ {
+  "source-id": "gov-arm-exec",
+  "name": "Government of Armenia",
+  "country": "AM",
+  "country-iso3": "ARM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.am/",
+  "ooyake-unit": "gov.arm.executive"
+ },
+ {
+  "source-id": "gov-atg-exec",
+  "name": "Antigua and Barbuda",
+  "country": "AG",
+  "country-iso3": "ATG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.ab.gov.ag",
+  "ooyake-unit": "gov.atg"
+ },
+ {
+  "source-id": "gov-aus-exec",
+  "name": "Australian Government",
+  "country": "AU",
+  "country-iso3": "AUS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.australia.gov.au/",
+  "ooyake-unit": "gov.aus.executive"
+ },
+ {
+  "source-id": "gov-aut-exec",
+  "name": "Austrian Federal Government",
+  "country": "AT",
+  "country-iso3": "AUT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.bundeskanzleramt.gv.at/",
+  "ooyake-unit": "gov.aut.executive"
+ },
+ {
+  "source-id": "gov-aze-exec",
+  "name": "Azerbaijan",
+  "country": "AZ",
+  "country-iso3": "AZE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://mfa.gov.az/en",
+  "ooyake-unit": "gov.aze"
+ },
+ {
+  "source-id": "gov-bdi-exec",
+  "name": "Council of Ministers",
+  "country": "BI",
+  "country-iso3": "BDI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://presidence.gov.bi/",
+  "ooyake-unit": "gov.bdi.executive"
+ },
+ {
+  "source-id": "gov-bel-exec",
+  "name": "Federal Government of Belgium",
+  "country": "BE",
+  "country-iso3": "BEL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gouvernement-federal.be/",
+  "ooyake-unit": "gov.bel.executive"
+ },
+ {
+  "source-id": "gov-ben-exec",
+  "name": "Government of Benin",
+  "country": "BJ",
+  "country-iso3": "BEN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gouv.bj/",
+  "ooyake-unit": "gov.ben.executive"
+ },
+ {
+  "source-id": "gov-bfa-exec",
+  "name": "Patriotic Movement for Safeguard and Restoration",
+  "country": "BF",
+  "country-iso3": "BFA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencedufaso.bf/",
+  "ooyake-unit": "gov.bfa.executive"
+ },
+ {
+  "source-id": "gov-bgd-exec",
+  "name": "Government of Bangladesh",
+  "country": "BD",
+  "country-iso3": "BGD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://bangladesh.gov.bd",
+  "ooyake-unit": "gov.bgd.executive"
+ },
+ {
+  "source-id": "gov-bgr-exec",
+  "name": "Council of Ministers of Bulgaria",
+  "country": "BG",
+  "country-iso3": "BGR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.government.bg/",
+  "ooyake-unit": "gov.bgr.executive"
+ },
+ {
+  "source-id": "gov-bhr-exec",
+  "name": "Bahrain",
+  "country": "BH",
+  "country-iso3": "BHR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.bahrain.bh",
+  "ooyake-unit": "gov.bhr"
+ },
+ {
+  "source-id": "gov-bhs-exec",
+  "name": "Cabinet of the Bahamas",
+  "country": "BS",
+  "country-iso3": "BHS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.bahamas.gov.bs/the-cabinet",
+  "ooyake-unit": "gov.bhs.executive"
+ },
+ {
+  "source-id": "gov-bih-exec",
+  "name": "Council of Ministers of Bosnia and Herzegovina",
+  "country": "BA",
+  "country-iso3": "BIH",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.vijeceministara.gov.ba/",
+  "ooyake-unit": "gov.bih.executive"
+ },
+ {
+  "source-id": "gov-blr-exec",
+  "name": "Council of Ministers of the Republic of Belarus",
+  "country": "BY",
+  "country-iso3": "BLR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://government.gov.by/by/",
+  "ooyake-unit": "gov.blr.executive"
+ },
+ {
+  "source-id": "gov-blz-exec",
+  "name": "Government of Belize",
+  "country": "BZ",
+  "country-iso3": "BLZ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.pressoffice.gov.bz/",
+  "ooyake-unit": "gov.blz.executive"
+ },
+ {
+  "source-id": "gov-bol-exec",
+  "name": "Bolivia",
+  "country": "BO",
+  "country-iso3": "BOL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gob.bo/",
+  "ooyake-unit": "gov.bol"
+ },
+ {
+  "source-id": "gov-bra-exec",
+  "name": "Federal Government of Brazil",
+  "country": "BR",
+  "country-iso3": "BRA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gov.br/",
+  "ooyake-unit": "gov.bra.executive"
+ },
+ {
+  "source-id": "gov-brb-exec",
+  "name": "Government of Barbados",
+  "country": "BB",
+  "country-iso3": "BRB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.bb/",
+  "ooyake-unit": "gov.brb.executive"
+ },
+ {
+  "source-id": "gov-brn-exec",
+  "name": "Brunei",
+  "country": "BN",
+  "country-iso3": "BRN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.bn/bm/Home.aspx",
+  "ooyake-unit": "gov.brn"
+ },
+ {
+  "source-id": "gov-btn-exec",
+  "name": "Lhengye Zhungtshog",
+  "country": "BT",
+  "country-iso3": "BTN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.cabinet.gov.bt/",
+  "ooyake-unit": "gov.btn.executive"
+ },
+ {
+  "source-id": "gov-bwa-exec",
+  "name": "Botswana",
+  "country": "BW",
+  "country-iso3": "BWA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gov.bw/",
+  "ooyake-unit": "gov.bwa"
+ },
+ {
+  "source-id": "gov-caf-exec",
+  "name": "Central African Republic",
+  "country": "CF",
+  "country-iso3": "CAF",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gouv.cf/",
+  "ooyake-unit": "gov.caf"
+ },
+ {
+  "source-id": "gov-can-exec",
+  "name": "Government of Canada",
+  "country": "CA",
+  "country-iso3": "CAN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.canada.ca/fr.html",
+  "ooyake-unit": "gov.can.executive"
+ },
+ {
+  "source-id": "gov-che-exec",
+  "name": "Swiss Federal Council",
+  "country": "CH",
+  "country-iso3": "CHE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.admin.ch/gov/en/start/federal-council.html",
+  "ooyake-unit": "gov.che.executive"
+ },
+ {
+  "source-id": "gov-chl-exec",
+  "name": "Cabinet of Chile",
+  "country": "CL",
+  "country-iso3": "CHL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gob.cl/",
+  "ooyake-unit": "gov.chl.executive"
+ },
+ {
+  "source-id": "gov-chn-exec",
+  "name": "State Council of the People's Republic of China",
+  "country": "CN",
+  "country-iso3": "CHN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.cn",
+  "ooyake-unit": "gov.chn.executive"
+ },
+ {
+  "source-id": "gov-civ-exec",
+  "name": "Ivory Coast",
+  "country": "CI",
+  "country-iso3": "CIV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gouv.ci",
+  "ooyake-unit": "gov.civ"
+ },
+ {
+  "source-id": "gov-cmr-exec",
+  "name": "Government of Cameroon",
+  "country": "CM",
+  "country-iso3": "CMR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.spm.gov.cm/",
+  "ooyake-unit": "gov.cmr.executive"
+ },
+ {
+  "source-id": "gov-cod-exec",
+  "name": "Government of the Democratic Republic of the Congo",
+  "country": "CD",
+  "country-iso3": "COD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.primature.gouv.cd/",
+  "ooyake-unit": "gov.cod.executive"
+ },
+ {
+  "source-id": "gov-cog-exec",
+  "name": "Makosso government",
+  "country": "CG",
+  "country-iso3": "COG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gouvernement.cg/",
+  "ooyake-unit": "gov.cog.executive"
+ },
+ {
+  "source-id": "gov-col-exec",
+  "name": "Government of Colombia",
+  "country": "CO",
+  "country-iso3": "COL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.gov.co/",
+  "ooyake-unit": "gov.col.executive"
+ },
+ {
+  "source-id": "gov-com-exec",
+  "name": "Comoros",
+  "country": "KM",
+  "country-iso3": "COM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://beit-salam.km/",
+  "ooyake-unit": "gov.com"
+ },
+ {
+  "source-id": "gov-cpv-exec",
+  "name": "Cape Verde",
+  "country": "CV",
+  "country-iso3": "CPV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.governo.cv",
+  "ooyake-unit": "gov.cpv"
+ },
+ {
+  "source-id": "gov-cri-exec",
+  "name": "Costa Rica",
+  "country": "CR",
+  "country-iso3": "CRI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.go.cr/",
+  "ooyake-unit": "gov.cri"
+ },
+ {
+  "source-id": "gov-cub-exec",
+  "name": "Council of Ministers",
+  "country": "CU",
+  "country-iso3": "CUB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.gob.cu/",
+  "ooyake-unit": "gov.cub.executive"
+ },
+ {
+  "source-id": "gov-cyp-exec",
+  "name": "Government of Cyprus Republic",
+  "country": "CY",
+  "country-iso3": "CYP",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.cyprus.gov.cy",
+  "ooyake-unit": "gov.cyp.executive"
+ },
+ {
+  "source-id": "gov-cze-exec",
+  "name": "Government of the Czech Republic",
+  "country": "CZ",
+  "country-iso3": "CZE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.vlada.cz/",
+  "ooyake-unit": "gov.cze.executive"
+ },
+ {
+  "source-id": "gov-deu-exec",
+  "name": "Government of the Federal Republic of Germany",
+  "country": "DE",
+  "country-iso3": "DEU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.bundesregierung.de/breg-de",
+  "ooyake-unit": "gov.deu.executive"
+ },
+ {
+  "source-id": "gov-dji-exec",
+  "name": "Djibouti",
+  "country": "DJ",
+  "country-iso3": "DJI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidence.dj/",
+  "ooyake-unit": "gov.dji"
+ },
+ {
+  "source-id": "gov-dma-exec",
+  "name": "Dominica",
+  "country": "DM",
+  "country-iso3": "DMA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.dominica.gov.dm/",
+  "ooyake-unit": "gov.dma"
+ },
+ {
+  "source-id": "gov-dnk-exec",
+  "name": "Denmark",
+  "country": "DK",
+  "country-iso3": "DNK",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://denmark.dk",
+  "ooyake-unit": "gov.dnk"
+ },
+ {
+  "source-id": "gov-dom-exec",
+  "name": "Dominican Republic",
+  "country": "DO",
+  "country-iso3": "DOM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.dominicanrepublic.com/",
+  "ooyake-unit": "gov.dom"
+ },
+ {
+  "source-id": "gov-dza-exec",
+  "name": "Government of Algeria",
+  "country": "DZ",
+  "country-iso3": "DZA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.premier-ministre.gov.dz/fr",
+  "ooyake-unit": "gov.dza.executive"
+ },
+ {
+  "source-id": "gov-ecu-exec",
+  "name": "Government of Ecuador",
+  "country": "EC",
+  "country-iso3": "ECU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gob.ec/",
+  "ooyake-unit": "gov.ecu.executive"
+ },
+ {
+  "source-id": "gov-egy-exec",
+  "name": "Cabinet of Egypt",
+  "country": "EG",
+  "country-iso3": "EGY",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.cabinet.gov.eg/",
+  "ooyake-unit": "gov.egy.executive"
+ },
+ {
+  "source-id": "gov-eri-exec",
+  "name": "Eritrea",
+  "country": "ER",
+  "country-iso3": "ERI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.shabait.com/index.php",
+  "ooyake-unit": "gov.eri"
+ },
+ {
+  "source-id": "gov-esp-exec",
+  "name": "Government of Spain",
+  "country": "ES",
+  "country-iso3": "ESP",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.lamoncloa.gob.es/",
+  "ooyake-unit": "gov.esp.executive"
+ },
+ {
+  "source-id": "gov-est-exec",
+  "name": "Government of Estonia",
+  "country": "EE",
+  "country-iso3": "EST",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.valitsus.ee/",
+  "ooyake-unit": "gov.est.executive"
+ },
+ {
+  "source-id": "gov-eth-exec",
+  "name": "Government of Ethiopia",
+  "country": "ET",
+  "country-iso3": "ETH",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.pmo.gov.et/",
+  "ooyake-unit": "gov.eth.executive"
+ },
+ {
+  "source-id": "gov-fin-exec",
+  "name": "Finnish Government",
+  "country": "FI",
+  "country-iso3": "FIN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://valtioneuvosto.fi/",
+  "ooyake-unit": "gov.fin.executive"
+ },
+ {
+  "source-id": "gov-fji-exec",
+  "name": "Fiji",
+  "country": "FJ",
+  "country-iso3": "FJI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.fiji.gov.fj/Home",
+  "ooyake-unit": "gov.fji"
+ },
+ {
+  "source-id": "gov-fra-exec",
+  "name": "Government of the French Republic",
+  "country": "FR",
+  "country-iso3": "FRA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.info.gouv.fr",
+  "ooyake-unit": "gov.fra.executive"
+ },
+ {
+  "source-id": "gov-fsm-exec",
+  "name": "Government of the Federated States of Micronesia",
+  "country": "FM",
+  "country-iso3": "FSM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.fsmgov.org",
+  "ooyake-unit": "gov.fsm.executive"
+ },
+ {
+  "source-id": "gov-gab-exec",
+  "name": "Gabon",
+  "country": "GA",
+  "country-iso3": "GAB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gouvernement.ga",
+  "ooyake-unit": "gov.gab"
+ },
+ {
+  "source-id": "gov-gbr-exec",
+  "name": "Government of the United Kingdom",
+  "country": "GB",
+  "country-iso3": "GBR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gov.uk/",
+  "ooyake-unit": "gov.gbr.executive"
+ },
+ {
+  "source-id": "gov-geo-exec",
+  "name": "Government of Georgia",
+  "country": "GE",
+  "country-iso3": "GEO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.ge/",
+  "ooyake-unit": "gov.geo.executive"
+ },
+ {
+  "source-id": "gov-gha-exec",
+  "name": "Government of Ghana",
+  "country": "GH",
+  "country-iso3": "GHA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.ghana.gov.gh/",
+  "ooyake-unit": "gov.gha.executive"
+ },
+ {
+  "source-id": "gov-gin-exec",
+  "name": "Guinea",
+  "country": "GN",
+  "country-iso3": "GIN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.presidence.gov.gn/",
+  "ooyake-unit": "gov.gin"
+ },
+ {
+  "source-id": "gov-gmb-exec",
+  "name": "The Gambia",
+  "country": "GM",
+  "country-iso3": "GMB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gambia.gov.gm/",
+  "ooyake-unit": "gov.gmb"
+ },
+ {
+  "source-id": "gov-gnb-exec",
+  "name": "Guinea-Bissau",
+  "country": "GW",
+  "country-iso3": "GNB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.gw/",
+  "ooyake-unit": "gov.gnb"
+ },
+ {
+  "source-id": "gov-gnq-exec",
+  "name": "Government of Equatorial Guinea",
+  "country": "GQ",
+  "country-iso3": "GNQ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.guineaecuatorialpress.com/?lang=en",
+  "ooyake-unit": "gov.gnq.executive"
+ },
+ {
+  "source-id": "gov-grc-exec",
+  "name": "Government of Greece",
+  "country": "GR",
+  "country-iso3": "GRC",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.government.gov.gr",
+  "ooyake-unit": "gov.grc.executive"
+ },
+ {
+  "source-id": "gov-grd-exec",
+  "name": "Cabinet of Grenada",
+  "country": "GD",
+  "country-iso3": "GRD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.gd/",
+  "ooyake-unit": "gov.grd.executive"
+ },
+ {
+  "source-id": "gov-gtm-exec",
+  "name": "Council of Ministers",
+  "country": "GT",
+  "country-iso3": "GTM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://guatemala.gob.gt/",
+  "ooyake-unit": "gov.gtm.executive"
+ },
+ {
+  "source-id": "gov-guy-exec",
+  "name": "Guyana",
+  "country": "GY",
+  "country-iso3": "GUY",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://parliament.gov.gy/",
+  "ooyake-unit": "gov.guy"
+ },
+ {
+  "source-id": "gov-hnd-exec",
+  "name": "Government of Honduras",
+  "country": "HN",
+  "country-iso3": "HND",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.gob.hn/",
+  "ooyake-unit": "gov.hnd.executive"
+ },
+ {
+  "source-id": "gov-hrv-exec",
+  "name": "Government of Croatia",
+  "country": "HR",
+  "country-iso3": "HRV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://vlada.gov.hr/",
+  "ooyake-unit": "gov.hrv.executive"
+ },
+ {
+  "source-id": "gov-hti-exec",
+  "name": "Government of Haiti",
+  "country": "HT",
+  "country-iso3": "HTI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.primature.gouv.ht/",
+  "ooyake-unit": "gov.hti.executive"
+ },
+ {
+  "source-id": "gov-hun-exec",
+  "name": "Government of Hungary",
+  "country": "HU",
+  "country-iso3": "HUN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://kormany.hu/",
+  "ooyake-unit": "gov.hun.executive"
+ },
+ {
+  "source-id": "gov-idn-exec",
+  "name": "Government of Indonesia",
+  "country": "ID",
+  "country-iso3": "IDN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://indonesia.go.id",
+  "ooyake-unit": "gov.idn.executive"
+ },
+ {
+  "source-id": "gov-ind-exec",
+  "name": "executive branch of the Government of India",
+  "country": "IN",
+  "country-iso3": "IND",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://cabsec.gov.in/",
+  "ooyake-unit": "gov.ind.executive"
+ },
+ {
+  "source-id": "gov-irl-exec",
+  "name": "Government of Ireland",
+  "country": "IE",
+  "country-iso3": "IRL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.ie/",
+  "ooyake-unit": "gov.irl.executive"
+ },
+ {
+  "source-id": "gov-irn-exec",
+  "name": "Government of Iran",
+  "country": "IR",
+  "country-iso3": "IRN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.dolat.ir/",
+  "ooyake-unit": "gov.irn.executive"
+ },
+ {
+  "source-id": "gov-irq-exec",
+  "name": "Iraq",
+  "country": "IQ",
+  "country-iso3": "IRQ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gds.gov.iq/",
+  "ooyake-unit": "gov.irq"
+ },
+ {
+  "source-id": "gov-isl-exec",
+  "name": "Government of Iceland",
+  "country": "IS",
+  "country-iso3": "ISL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.stjornarradid.is/",
+  "ooyake-unit": "gov.isl.executive"
+ },
+ {
+  "source-id": "gov-isr-exec",
+  "name": "Israel",
+  "country": "IL",
+  "country-iso3": "ISR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.il/",
+  "ooyake-unit": "gov.isr"
+ },
+ {
+  "source-id": "gov-ita-exec",
+  "name": "Government of Italy",
+  "country": "IT",
+  "country-iso3": "ITA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.governo.it/Sito",
+  "ooyake-unit": "gov.ita.executive"
+ },
+ {
+  "source-id": "gov-jam-exec",
+  "name": "Cabinet of Jamaica",
+  "country": "JM",
+  "country-iso3": "JAM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://cabinet.gov.jm/",
+  "ooyake-unit": "gov.jam.executive"
+ },
+ {
+  "source-id": "gov-jor-exec",
+  "name": "Jordan",
+  "country": "JO",
+  "country-iso3": "JOR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://jordan.gov.jo/",
+  "ooyake-unit": "gov.jor"
+ },
+ {
+  "source-id": "gov-jpn-exec",
+  "name": "Cabinet of Japan",
+  "country": "JP",
+  "country-iso3": "JPN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.kantei.go.jp/jp/naikaku/",
+  "ooyake-unit": "gov.jpn.executive"
+ },
+ {
+  "source-id": "gov-kaz-exec",
+  "name": "Government of Kazakhstan",
+  "country": "KZ",
+  "country-iso3": "KAZ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.government.kz/ru/",
+  "ooyake-unit": "gov.kaz.executive"
+ },
+ {
+  "source-id": "gov-ken-exec",
+  "name": "Government of Kenya",
+  "country": "KE",
+  "country-iso3": "KEN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.president.go.ke/",
+  "ooyake-unit": "gov.ken.executive"
+ },
+ {
+  "source-id": "gov-kgz-exec",
+  "name": "Cabinet of Ministers of Kyrgyzstan",
+  "country": "KG",
+  "country-iso3": "KGZ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.kg",
+  "ooyake-unit": "gov.kgz.executive"
+ },
+ {
+  "source-id": "gov-khm-exec",
+  "name": "Cambodia",
+  "country": "KH",
+  "country-iso3": "KHM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.ocm.gov.kh/",
+  "ooyake-unit": "gov.khm"
+ },
+ {
+  "source-id": "gov-kir-exec",
+  "name": "Kiribati",
+  "country": "KI",
+  "country-iso3": "KIR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.kiribati.gov.ki",
+  "ooyake-unit": "gov.kir"
+ },
+ {
+  "source-id": "gov-kna-exec",
+  "name": "Saint Kitts and Nevis",
+  "country": "KN",
+  "country-iso3": "KNA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.kn/",
+  "ooyake-unit": "gov.kna"
+ },
+ {
+  "source-id": "gov-kor-exec",
+  "name": "Government of South Korea",
+  "country": "KR",
+  "country-iso3": "KOR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.kr",
+  "ooyake-unit": "gov.kor.executive"
+ },
+ {
+  "source-id": "gov-kwt-exec",
+  "name": "Government of Kuwait",
+  "country": "KW",
+  "country-iso3": "KWT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.cmgs.gov.kw/",
+  "ooyake-unit": "gov.kwt.executive"
+ },
+ {
+  "source-id": "gov-lao-exec",
+  "name": "Laos",
+  "country": "LA",
+  "country-iso3": "LAO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.tourismlaos.org/",
+  "ooyake-unit": "gov.lao"
+ },
+ {
+  "source-id": "gov-lbn-exec",
+  "name": "Lebanon",
+  "country": "LB",
+  "country-iso3": "LBN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://presidency.gov.lb/",
+  "ooyake-unit": "gov.lbn"
+ },
+ {
+  "source-id": "gov-lbr-exec",
+  "name": "Liberia",
+  "country": "LR",
+  "country-iso3": "LBR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.emansion.gov.lr/",
+  "ooyake-unit": "gov.lbr"
+ },
+ {
+  "source-id": "gov-lby-exec",
+  "name": "Libya",
+  "country": "LY",
+  "country-iso3": "LBY",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gnu.gov.ly/",
+  "ooyake-unit": "gov.lby"
+ },
+ {
+  "source-id": "gov-lca-exec",
+  "name": "Saint Lucia",
+  "country": "LC",
+  "country-iso3": "LCA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.govt.lc/",
+  "ooyake-unit": "gov.lca"
+ },
+ {
+  "source-id": "gov-lie-exec",
+  "name": "Cabinet of Liechtenstein",
+  "country": "LI",
+  "country-iso3": "LIE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.regierung.li/",
+  "ooyake-unit": "gov.lie.executive"
+ },
+ {
+  "source-id": "gov-lka-exec",
+  "name": "Sri Lanka",
+  "country": "LK",
+  "country-iso3": "LKA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.lk/index.php",
+  "ooyake-unit": "gov.lka"
+ },
+ {
+  "source-id": "gov-lso-exec",
+  "name": "Lesotho",
+  "country": "LS",
+  "country-iso3": "LSO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.ls/",
+  "ooyake-unit": "gov.lso"
+ },
+ {
+  "source-id": "gov-ltu-exec",
+  "name": "Government of Lithuania",
+  "country": "LT",
+  "country-iso3": "LTU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://lrv.lt/lt/",
+  "ooyake-unit": "gov.ltu.executive"
+ },
+ {
+  "source-id": "gov-lux-exec",
+  "name": "Government of Luxembourg",
+  "country": "LU",
+  "country-iso3": "LUX",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gouvernement.lu/",
+  "ooyake-unit": "gov.lux.executive"
+ },
+ {
+  "source-id": "gov-lva-exec",
+  "name": "Government of Latvia",
+  "country": "LV",
+  "country-iso3": "LVA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.mk.gov.lv/",
+  "ooyake-unit": "gov.lva.executive"
+ },
+ {
+  "source-id": "gov-mar-exec",
+  "name": "Cabinet of Morocco",
+  "country": "MA",
+  "country-iso3": "MAR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.cg.gov.ma/",
+  "ooyake-unit": "gov.mar.executive"
+ },
+ {
+  "source-id": "gov-mco-exec",
+  "name": "Council of Government",
+  "country": "MC",
+  "country-iso3": "MCO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gouv.mc/",
+  "ooyake-unit": "gov.mco.executive"
+ },
+ {
+  "source-id": "gov-mda-exec",
+  "name": "Moldova",
+  "country": "MD",
+  "country-iso3": "MDA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.moldova.md/",
+  "ooyake-unit": "gov.mda"
+ },
+ {
+  "source-id": "gov-mdg-exec",
+  "name": "Madagascar",
+  "country": "MG",
+  "country-iso3": "MDG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.primature.gov.mg/",
+  "ooyake-unit": "gov.mdg"
+ },
+ {
+  "source-id": "gov-mdv-exec",
+  "name": "Maldives",
+  "country": "MV",
+  "country-iso3": "MDV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://visitmaldives.com/",
+  "ooyake-unit": "gov.mdv"
+ },
+ {
+  "source-id": "gov-mex-exec",
+  "name": "federal government of Mexico",
+  "country": "MX",
+  "country-iso3": "MEX",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gob.mx/",
+  "ooyake-unit": "gov.mex.executive"
+ },
+ {
+  "source-id": "gov-mhl-exec",
+  "name": "Government of the Marshall Islands",
+  "country": "MH",
+  "country-iso3": "MHL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://rmigov.com/",
+  "ooyake-unit": "gov.mhl.executive"
+ },
+ {
+  "source-id": "gov-mkd-exec",
+  "name": "Government of North Macedonia",
+  "country": "MK",
+  "country-iso3": "MKD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://vlada.mk",
+  "ooyake-unit": "gov.mkd.executive"
+ },
+ {
+  "source-id": "gov-mli-exec",
+  "name": "Mali",
+  "country": "ML",
+  "country-iso3": "MLI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.primature.gov.ml",
+  "ooyake-unit": "gov.mli"
+ },
+ {
+  "source-id": "gov-mlt-exec",
+  "name": "Government of Malta",
+  "country": "MT",
+  "country-iso3": "MLT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.mt/",
+  "ooyake-unit": "gov.mlt.executive"
+ },
+ {
+  "source-id": "gov-mmr-exec",
+  "name": "Myanmar",
+  "country": "MM",
+  "country-iso3": "MMR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.myanmar.gov.mm/",
+  "ooyake-unit": "gov.mmr"
+ },
+ {
+  "source-id": "gov-mne-exec",
+  "name": "Government of Montenegro",
+  "country": "ME",
+  "country-iso3": "MNE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.me/",
+  "ooyake-unit": "gov.mne.executive"
+ },
+ {
+  "source-id": "gov-mng-exec",
+  "name": "Government of Mongolia",
+  "country": "MN",
+  "country-iso3": "MNG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://zasag.mn",
+  "ooyake-unit": "gov.mng.executive"
+ },
+ {
+  "source-id": "gov-moz-exec",
+  "name": "government of Mozambique",
+  "country": "MZ",
+  "country-iso3": "MOZ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.portaldogoverno.gov.mz",
+  "ooyake-unit": "gov.moz.executive"
+ },
+ {
+  "source-id": "gov-mrt-exec",
+  "name": "Government of Mauritania",
+  "country": "MR",
+  "country-iso3": "MRT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.primature.gov.mr/",
+  "ooyake-unit": "gov.mrt.executive"
+ },
+ {
+  "source-id": "gov-mus-exec",
+  "name": "Government of Mauritius",
+  "country": "MU",
+  "country-iso3": "MUS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://pmo.govmu.org/",
+  "ooyake-unit": "gov.mus.executive"
+ },
+ {
+  "source-id": "gov-mwi-exec",
+  "name": "Cabinet of Malawi",
+  "country": "MW",
+  "country-iso3": "MWI",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.malawi.gov.mw/",
+  "ooyake-unit": "gov.mwi.executive"
+ },
+ {
+  "source-id": "gov-mys-exec",
+  "name": "Cabinet of Malaysia",
+  "country": "MY",
+  "country-iso3": "MYS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.kabinet.gov.my/bkpp/",
+  "ooyake-unit": "gov.mys.executive"
+ },
+ {
+  "source-id": "gov-nam-exec",
+  "name": "Government of Namibia",
+  "country": "NA",
+  "country-iso3": "NAM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.na/",
+  "ooyake-unit": "gov.nam.executive"
+ },
+ {
+  "source-id": "gov-ner-exec",
+  "name": "Cabinet of Niger",
+  "country": "NE",
+  "country-iso3": "NER",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gouv.ne/",
+  "ooyake-unit": "gov.ner.executive"
+ },
+ {
+  "source-id": "gov-nga-exec",
+  "name": "Cabinet of Nigeria",
+  "country": "NG",
+  "country-iso3": "NGA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://statehouse.gov.ng/",
+  "ooyake-unit": "gov.nga.executive"
+ },
+ {
+  "source-id": "gov-nic-exec",
+  "name": "Government of Nicaragua",
+  "country": "NI",
+  "country-iso3": "NIC",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.gob.ni/",
+  "ooyake-unit": "gov.nic.executive"
+ },
+ {
+  "source-id": "gov-nld-exec",
+  "name": "Kingdom of the Netherlands",
+  "country": "NL",
+  "country-iso3": "NLD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.rijksoverheid.nl/",
+  "ooyake-unit": "gov.nld"
+ },
+ {
+  "source-id": "gov-nor-exec",
+  "name": "Government of Norway",
+  "country": "NO",
+  "country-iso3": "NOR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://regjeringen.no/en/id4",
+  "ooyake-unit": "gov.nor.executive"
+ },
+ {
+  "source-id": "gov-npl-exec",
+  "name": "Government of Nepal",
+  "country": "NP",
+  "country-iso3": "NPL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.nepalgov.gov.np/",
+  "ooyake-unit": "gov.npl.executive"
+ },
+ {
+  "source-id": "gov-nru-exec",
+  "name": "Cabinet of Nauru",
+  "country": "NR",
+  "country-iso3": "NRU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.nauru.gov.nr/",
+  "ooyake-unit": "gov.nru.executive"
+ },
+ {
+  "source-id": "gov-nzl-exec",
+  "name": "Government of New Zealand",
+  "country": "NZ",
+  "country-iso3": "NZL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.govt.nz/",
+  "ooyake-unit": "gov.nzl.executive"
+ },
+ {
+  "source-id": "gov-omn-exec",
+  "name": "Cabinet of Oman",
+  "country": "OM",
+  "country-iso3": "OMN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gov.om/",
+  "ooyake-unit": "gov.omn.executive"
+ },
+ {
+  "source-id": "gov-pak-exec",
+  "name": "Government of Pakistan",
+  "country": "PK",
+  "country-iso3": "PAK",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.pakistan.gov.pk/",
+  "ooyake-unit": "gov.pak.executive"
+ },
+ {
+  "source-id": "gov-pan-exec",
+  "name": "Panama",
+  "country": "PA",
+  "country-iso3": "PAN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://visitpanama.com/?lang=en",
+  "ooyake-unit": "gov.pan"
+ },
+ {
+  "source-id": "gov-per-exec",
+  "name": "Government of Peru",
+  "country": "PE",
+  "country-iso3": "PER",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gob.pe/",
+  "ooyake-unit": "gov.per.executive"
+ },
+ {
+  "source-id": "gov-phl-exec",
+  "name": "Government of the Philippines",
+  "country": "PH",
+  "country-iso3": "PHL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.ph/",
+  "ooyake-unit": "gov.phl.executive"
+ },
+ {
+  "source-id": "gov-plw-exec",
+  "name": "Government of Palau",
+  "country": "PW",
+  "country-iso3": "PLW",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.palaugov.pw/executive-branch/",
+  "ooyake-unit": "gov.plw.executive"
+ },
+ {
+  "source-id": "gov-png-exec",
+  "name": "National Executive Council of Papua New Guinea",
+  "country": "PG",
+  "country-iso3": "PNG",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.pmnec.gov.pg/",
+  "ooyake-unit": "gov.png.executive"
+ },
+ {
+  "source-id": "gov-pol-exec",
+  "name": "Council of Ministers",
+  "country": "PL",
+  "country-iso3": "POL",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.pl/web/gov/rada-ministrow",
+  "ooyake-unit": "gov.pol.executive"
+ },
+ {
+  "source-id": "gov-prk-exec",
+  "name": "Government of North Korea",
+  "country": "KP",
+  "country-iso3": "PRK",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.minzu.rep.kp/",
+  "ooyake-unit": "gov.prk.executive"
+ },
+ {
+  "source-id": "gov-prt-exec",
+  "name": "Government of Portugal",
+  "country": "PT",
+  "country-iso3": "PRT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.portugal.gov.pt/en.aspx",
+  "ooyake-unit": "gov.prt.executive"
+ },
+ {
+  "source-id": "gov-pry-exec",
+  "name": "Paraguay",
+  "country": "PY",
+  "country-iso3": "PRY",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.paraguay.gov.py/",
+  "ooyake-unit": "gov.pry"
+ },
+ {
+  "source-id": "gov-qat-exec",
+  "name": "Qatar",
+  "country": "QA",
+  "country-iso3": "QAT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.diwan.gov.qa/",
+  "ooyake-unit": "gov.qat"
+ },
+ {
+  "source-id": "gov-rou-exec",
+  "name": "Government of Romania",
+  "country": "RO",
+  "country-iso3": "ROU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://gov.ro/",
+  "ooyake-unit": "gov.rou.executive"
+ },
+ {
+  "source-id": "gov-rus-exec",
+  "name": "Government of Russia",
+  "country": "RU",
+  "country-iso3": "RUS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.government.ru/",
+  "ooyake-unit": "gov.rus.executive"
+ },
+ {
+  "source-id": "gov-rwa-exec",
+  "name": "Cabinet of Rwanda",
+  "country": "RW",
+  "country-iso3": "RWA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.rw/cabinet",
+  "ooyake-unit": "gov.rwa.executive"
+ },
+ {
+  "source-id": "gov-sau-exec",
+  "name": "Council of Ministers of Saudi Arabia",
+  "country": "SA",
+  "country-iso3": "SAU",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://my.gov.sa/en/agencies/17489",
+  "ooyake-unit": "gov.sau.executive"
+ },
+ {
+  "source-id": "gov-sdn-exec",
+  "name": "Sudan",
+  "country": "SD",
+  "country-iso3": "SDN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.sudan.gov.sd/",
+  "ooyake-unit": "gov.sdn"
+ },
+ {
+  "source-id": "gov-sen-exec",
+  "name": "Senegal",
+  "country": "SN",
+  "country-iso3": "SEN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.sec.gouv.sn/",
+  "ooyake-unit": "gov.sen"
+ },
+ {
+  "source-id": "gov-sgp-exec",
+  "name": "Government of Singapore",
+  "country": "SG",
+  "country-iso3": "SGP",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.sg/",
+  "ooyake-unit": "gov.sgp.executive"
+ },
+ {
+  "source-id": "gov-slb-exec",
+  "name": "Solomon Islands",
+  "country": "SB",
+  "country-iso3": "SLB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://solomons.gov.sb",
+  "ooyake-unit": "gov.slb"
+ },
+ {
+  "source-id": "gov-sle-exec",
+  "name": "Sierra Leone",
+  "country": "SL",
+  "country-iso3": "SLE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://statehouse.gov.sl/",
+  "ooyake-unit": "gov.sle"
+ },
+ {
+  "source-id": "gov-slv-exec",
+  "name": "Government of El Salvador",
+  "country": "SV",
+  "country-iso3": "SLV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.presidencia.gob.sv/",
+  "ooyake-unit": "gov.slv.executive"
+ },
+ {
+  "source-id": "gov-smr-exec",
+  "name": "Congress of State",
+  "country": "SM",
+  "country-iso3": "SMR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.interni.segreteria.sm/on-line/home/istituzioni/congresso-di-stato.html",
+  "ooyake-unit": "gov.smr.executive"
+ },
+ {
+  "source-id": "gov-som-exec",
+  "name": "Federal Government of Somalia",
+  "country": "SO",
+  "country-iso3": "SOM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.somalia.gov.so/",
+  "ooyake-unit": "gov.som.executive"
+ },
+ {
+  "source-id": "gov-srb-exec",
+  "name": "Government of Serbia",
+  "country": "RS",
+  "country-iso3": "SRB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.srbija.gov.rs/",
+  "ooyake-unit": "gov.srb.executive"
+ },
+ {
+  "source-id": "gov-ssd-exec",
+  "name": "South Sudan",
+  "country": "SS",
+  "country-iso3": "SSD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://op.gov.ss/",
+  "ooyake-unit": "gov.ssd"
+ },
+ {
+  "source-id": "gov-stp-exec",
+  "name": "government of São Tomé and Príncipe",
+  "country": "ST",
+  "country-iso3": "STP",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://stp.gov.st/",
+  "ooyake-unit": "gov.stp.executive"
+ },
+ {
+  "source-id": "gov-sur-exec",
+  "name": "Suriname",
+  "country": "SR",
+  "country-iso3": "SUR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://gov.sr/",
+  "ooyake-unit": "gov.sur"
+ },
+ {
+  "source-id": "gov-svk-exec",
+  "name": "Government of Slovakia",
+  "country": "SK",
+  "country-iso3": "SVK",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.vlada.gov.sk/",
+  "ooyake-unit": "gov.svk.executive"
+ },
+ {
+  "source-id": "gov-svn-exec",
+  "name": "Government of Slovenia",
+  "country": "SI",
+  "country-iso3": "SVN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.si/en/state-authorities/government/",
+  "ooyake-unit": "gov.svn.executive"
+ },
+ {
+  "source-id": "gov-swe-exec",
+  "name": "Government of Sweden",
+  "country": "SE",
+  "country-iso3": "SWE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://government.se",
+  "ooyake-unit": "gov.swe.executive"
+ },
+ {
+  "source-id": "gov-swz-exec",
+  "name": "Eswatini",
+  "country": "SZ",
+  "country-iso3": "SWZ",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gov.sz/",
+  "ooyake-unit": "gov.swz"
+ },
+ {
+  "source-id": "gov-syc-exec",
+  "name": "Seychelles",
+  "country": "SC",
+  "country-iso3": "SYC",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://egov.sc",
+  "ooyake-unit": "gov.syc"
+ },
+ {
+  "source-id": "gov-syr-exec",
+  "name": "Government of Syria",
+  "country": "SY",
+  "country-iso3": "SYR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.sy",
+  "ooyake-unit": "gov.syr.executive"
+ },
+ {
+  "source-id": "gov-tcd-exec",
+  "name": "Government of Chad",
+  "country": "TD",
+  "country-iso3": "TCD",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://primature.gouv.td/",
+  "ooyake-unit": "gov.tcd.executive"
+ },
+ {
+  "source-id": "gov-tgo-exec",
+  "name": "Government of Togo",
+  "country": "TG",
+  "country-iso3": "TGO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://togo.gouv.tg/",
+  "ooyake-unit": "gov.tgo.executive"
+ },
+ {
+  "source-id": "gov-tha-exec",
+  "name": "Government of Thailand",
+  "country": "TH",
+  "country-iso3": "THA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.thaigov.go.th",
+  "ooyake-unit": "gov.tha.executive"
+ },
+ {
+  "source-id": "gov-tjk-exec",
+  "name": "Tajikistan",
+  "country": "TJ",
+  "country-iso3": "TJK",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.president.tj/",
+  "ooyake-unit": "gov.tjk"
+ },
+ {
+  "source-id": "gov-tkm-exec",
+  "name": "Turkmenistan",
+  "country": "TM",
+  "country-iso3": "TKM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.turkmenistan.gov.tm/",
+  "ooyake-unit": "gov.tkm"
+ },
+ {
+  "source-id": "gov-tls-exec",
+  "name": "Cabinet of East Timor",
+  "country": "TL",
+  "country-iso3": "TLS",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://timor-leste.gov.tl/",
+  "ooyake-unit": "gov.tls.executive"
+ },
+ {
+  "source-id": "gov-ton-exec",
+  "name": "Tonga",
+  "country": "TO",
+  "country-iso3": "TON",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.mic.gov.to/",
+  "ooyake-unit": "gov.ton"
+ },
+ {
+  "source-id": "gov-tto-exec",
+  "name": "Trinidad and Tobago",
+  "country": "TT",
+  "country-iso3": "TTO",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gov.tt/",
+  "ooyake-unit": "gov.tto"
+ },
+ {
+  "source-id": "gov-tun-exec",
+  "name": "Government of Tunisia",
+  "country": "TN",
+  "country-iso3": "TUN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.tunisie.gov.tn/",
+  "ooyake-unit": "gov.tun.executive"
+ },
+ {
+  "source-id": "gov-tur-exec",
+  "name": "government of Turkey",
+  "country": "TR",
+  "country-iso3": "TUR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.turkiye.gov.tr",
+  "ooyake-unit": "gov.tur.executive"
+ },
+ {
+  "source-id": "gov-tuv-exec",
+  "name": "Tuvalu",
+  "country": "TV",
+  "country-iso3": "TUV",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.tv/",
+  "ooyake-unit": "gov.tuv"
+ },
+ {
+  "source-id": "gov-tza-exec",
+  "name": "Cabinet of Tanzania",
+  "country": "TZ",
+  "country-iso3": "TZA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.ikulu.go.tz/cabinet",
+  "ooyake-unit": "gov.tza.executive"
+ },
+ {
+  "source-id": "gov-uga-exec",
+  "name": "Government of Uganda",
+  "country": "UG",
+  "country-iso3": "UGA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://gov.ug/",
+  "ooyake-unit": "gov.uga.executive"
+ },
+ {
+  "source-id": "gov-ukr-exec",
+  "name": "Cabinet of Ministers of Ukraine",
+  "country": "UA",
+  "country-iso3": "UKR",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.kmu.gov.ua/",
+  "ooyake-unit": "gov.ukr.executive"
+ },
+ {
+  "source-id": "gov-ury-exec",
+  "name": "Presidencia de la República",
+  "country": "UY",
+  "country-iso3": "URY",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gub.uy/presidencia/",
+  "ooyake-unit": "gov.ury.executive"
+ },
+ {
+  "source-id": "gov-usa-exec",
+  "name": "Federal Government of the United States",
+  "country": "US",
+  "country-iso3": "USA",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.usa.gov/",
+  "ooyake-unit": "gov.usa.executive"
+ },
+ {
+  "source-id": "gov-uzb-exec",
+  "name": "Government of Uzbekistan",
+  "country": "UZ",
+  "country-iso3": "UZB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://gov.uz/en/",
+  "ooyake-unit": "gov.uzb.executive"
+ },
+ {
+  "source-id": "gov-vct-exec",
+  "name": "Saint Vincent and the Grenadines",
+  "country": "VC",
+  "country-iso3": "VCT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.vc/",
+  "ooyake-unit": "gov.vct"
+ },
+ {
+  "source-id": "gov-ven-exec",
+  "name": "Cabinet of Venezuela",
+  "country": "VE",
+  "country-iso3": "VEN",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gobiernoenlinea.gob.ve",
+  "ooyake-unit": "gov.ven.executive"
+ },
+ {
+  "source-id": "gov-vnm-exec",
+  "name": "Government of Vietnam",
+  "country": "VN",
+  "country-iso3": "VNM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.gov.vn/portal/page/portal/English",
+  "ooyake-unit": "gov.vnm.executive"
+ },
+ {
+  "source-id": "gov-vut-exec",
+  "name": "Vanuatu",
+  "country": "VU",
+  "country-iso3": "VUT",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.vu/",
+  "ooyake-unit": "gov.vut"
+ },
+ {
+  "source-id": "gov-wsm-exec",
+  "name": "Samoa",
+  "country": "WS",
+  "country-iso3": "WSM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "http://www.samoagovt.ws/",
+  "ooyake-unit": "gov.wsm"
+ },
+ {
+  "source-id": "gov-yem-exec",
+  "name": "Government of Yemen",
+  "country": "YE",
+  "country-iso3": "YEM",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.yemen.gov.ye/",
+  "ooyake-unit": "gov.yem.executive"
+ },
+ {
+  "source-id": "gov-zaf-exec",
+  "name": "Government of South Africa",
+  "country": "ZA",
+  "country-iso3": "ZAF",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.gov.za/",
+  "ooyake-unit": "gov.zaf.executive"
+ },
+ {
+  "source-id": "gov-zmb-exec",
+  "name": "Cabinet of Zambia",
+  "country": "ZM",
+  "country-iso3": "ZMB",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.cabinet.gov.zm/",
+  "ooyake-unit": "gov.zmb.executive"
+ },
+ {
+  "source-id": "gov-zwe-exec",
+  "name": "Zimbabwe",
+  "country": "ZW",
+  "country-iso3": "ZWE",
+  "kind": "government-pr",
+  "domain": "general",
+  "homepage": "https://www.zim.gov.zw/index.php/",
+  "ooyake-unit": "gov.zwe"
+ }
+]
