@@ -15,6 +15,9 @@
   ;; KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest → real fetch + real publish
   ;; over every :verified registry/sources.seed.json source (kouhou.run-live-ingest).
   :live-ingest {:main-opts ["-m" "kouhou.run-live-ingest"]}
+  ;; clojure -M:verify-corpus →各 corpus receipt を実ファイルと突き合わせる
+  ;; （identity の検査。custody は git annex fsck --from kotobase が別に答える）
+  :verify-corpus {:main-opts ["-m" "kouhou.verify-corpus"]}
   :test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner
                       {:git/tag "v0.5.1" :git/sha "dfb30dd"}}

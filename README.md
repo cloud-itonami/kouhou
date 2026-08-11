@@ -166,10 +166,28 @@ rule; the annex remote is `kotobase` (`s3.kotobase.net`, bucket
 `cloud-itonami-kouhou`).
 
 ```bash
-git annex copy --to kotobase --jobs 1   # jobs=1 is fastest: one head per bucket
+clojure -M:verify-corpus                # every receipt vs the file on disk
+git annex copy raw/ --to kotobase --jobs 1   # jobs=1: one head per bucket
 datalad drop raw/                       # local bytes go, pointers stay
 datalad get  raw/2026-08-11             # fetch a day back
 ```
+
+`verify-corpus` answers **identity** (is this file still what the receipt
+describes) and treats dropped bytes as absent, not failed — that is what the
+annex is for. **Custody** — does the object plane still hold them — is a
+different question with a different command:
+
+```bash
+git annex find --in kotobase raw/ | wc -l    # what is actually recorded there
+```
+
+**Do not read `git annex fsck --from kotobase` output as a custody count.** A
+key the location log does not place in the remote is printed `ok` because
+there was nothing to check, so a run can print 48 `ok` lines while only 38
+objects are there. Measured 2026-08-11: the first `copy` left 10 of 48 behind,
+fsck then printed 48 `ok`, and `--in kotobase` was the only command that said
+38. A second `copy` finished them. Count what is in the remote; do not count
+lines that did not fail.
 
 ## Injected seams (each a swap, core unchanged)
 
