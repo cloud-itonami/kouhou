@@ -131,9 +131,49 @@ gets passed to it differs between an offline test and a live run.
 | 0 | observe | no — governor-clean briefings recorded only (shadow) |
 | 1 | autonomous-publish (**default**, 種をまく) | yes |
 
+## Storage — canonical EDN in git, feed bytes in the annex
+
+A live-ingest run persists to three planes. Nothing is kept in two of them for
+the same reason; each answers a question the others cannot.
+
+| plane | path | what it is | where the bytes live |
+|---|---|---|---|
+| briefings | `data/briefings/<UTC-day>.edn` | every curated briefing, appended | git |
+| ledger | `data/ledger/<UTC-day>.edn` | every `:commit` / `:hold` decision fact | git |
+| corpus receipts | `data/corpus/<UTC-day>.edn` | one per fetch: feed URL, item, disposition, `{:path :sha256 :bytes}` of the archived feed | git |
+| raw feeds | `raw/<UTC-day>/<source-id>.xml` | the fetched document itself | git-annex → `s3.kotobase.net` |
+
+Line-delimited **canonical** EDN (`kouhou.canonical`): maps are key-sorted
+before printing, so equal values have equal bytes — otherwise `git diff` shows
+reordered lines and the same record digests two ways.
+
+**Append-only**, and that is not a contradiction of the superproject's
+「文書は最新状態のみを表す」 rule — that rule names measurement and event
+series as its standing exception, and a ledger of past decisions is exactly
+that. `store/briefing` still reads the latest per source; the history behind it
+is a fold over the shards, not something overwritten.
+
+The **corpus receipt is the join** between the two planes: given a briefing you
+can name the exact feed it was derived from and verify its digest; given a feed
+you can find every briefing that came out of it. Without the digest the pairing
+would be by filename, which proves nothing about content.
+
+Feed bytes go to git-annex rather than git because 201 sources × one feed each
+is ~10 MB per pass — a year of daily passes would make cloning the *actor*
+require downloading its *corpus*. Small semantic EDN stays an ordinary git blob
+where it can be reviewed. This is the superproject's `large-binary-datalad`
+rule; the annex remote is `kotobase` (`s3.kotobase.net`, bucket
+`cloud-itonami-kouhou`).
+
+```bash
+git annex copy --to kotobase --jobs 1   # jobs=1 is fastest: one head per bucket
+datalad drop raw/                       # local bytes go, pointers stay
+datalad get  raw/2026-08-11             # fetch a day back
+```
+
 ## Injected seams (each a swap, core unchanged)
 
-- **Store** — `MemStore` ‖ `DatomicStore` (langchain.db `:db-api`) ‖ kotoba-server pod.
+- **Store** — `EdnStore` (**default for live-ingest**, durable) ‖ `MemStore` (tests) ‖ `DatomicStore` (langchain.db `:db-api`) ‖ kotoba-server pod.
 - **Advisor** — `mock-advisor` (deterministic) ‖ real LLM on `langchain.model` / Murakumo.
 - **Publisher** — `MockPublisher` ‖ real app-aozora createRecord (`kouhou.aozora`).
 - **Phase** — 0 observe → 1 autonomous-publish.
@@ -150,7 +190,20 @@ clojure -M:dev:run       # offline demo (one registered + one unregistered sourc
 # source — refuses (no network call) unless the gate is set. Founder/Council explicit
 # go-live instruction required to set this (ADR-2607110200 precedent).
 KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest
+
+# ingest + persist WITHOUT publishing — the two capabilities are separable.
+# Fetching a registered government feed onto our own disk is read-only and
+# reversible; publishing to a shared PDS is neither. This is the form an
+# unattended corpus run should take.
+KOUHOU_ALLOW_LIVE_INGEST=1 KOUHOU_PUBLISH=0 clojure -M:live-ingest
 ```
+
+| env | default | effect |
+|---|---|---|
+| `KOUHOU_ALLOW_LIVE_INGEST` | unset (**off**) | the network gate; nothing is fetched without it |
+| `KOUHOU_PUBLISH` | `1` | `0` = store only, no app-aozora write |
+| `KOUHOU_DATA_DIR` / `KOUHOU_RAW_DIR` | `data` / `raw` | where the planes above are written |
+| `KOUHOU_MAX_SOURCES` | unset (all) | cap the pass — for a smoke run against real feeds |
 
 ## Related files
 

@@ -237,9 +237,18 @@
        (let [xml   (fetch-fn (:url source))
              items (parse-feed xml)
              item  (latest-item items)]
+         ;; :raw-feed is the whole fetched document, carried out alongside the
+         ;; one item the doctrine allows through. The actor still sees exactly
+         ;; one candidate — this does not widen what gets curated or published
+         ;; — but `kouhou.raw-archive` can now keep the source the briefing was
+         ;; derived from. Before this it was parsed and dropped on the floor,
+         ;; which left every published provenance URL dependent on the origin
+         ;; server still serving that page later.
          (if item
-           {:refused false :source-id (:source-id source) :item item :item-count (count items)}
+           {:refused false :source-id (:source-id source) :item item
+            :item-count (count items) :raw-feed xml}
            {:refused false :source-id (:source-id source) :item nil :item-count 0
+            :raw-feed xml
             :fetch-error "feed parsed to zero items (unrecognized format or empty channel)"}))
        (catch #?(:clj Exception :cljs js/Error) e
          {:refused false :source-id (:source-id source) :item nil :item-count 0

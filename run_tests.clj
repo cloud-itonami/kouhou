@@ -5,6 +5,8 @@
   (:require [clojure.test :refer [run-tests]]
             [kouhou.governor-contract-test]
             [kouhou.store-contract-test]
+            [kouhou.edn-store-test]
+            [kouhou.raw-archive-test]
             [kouhou.operation-test])
   (:gen-class))
 
@@ -12,6 +14,8 @@
   (let [res (run-tests
              'kouhou.governor-contract-test
              'kouhou.store-contract-test
+             'kouhou.edn-store-test
+             'kouhou.raw-archive-test
              'kouhou.operation-test)]
     (when (pos? (+ (:fail res 0) (:error res 0)))
       (System/exit 1))))
