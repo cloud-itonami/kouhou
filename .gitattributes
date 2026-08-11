@@ -17,4 +17,11 @@
 # The fetched feeds. ~10 MB per full pass over 201 sources; a year of daily
 # passes would make cloning the actor require downloading its corpus.
 raw/** annex.largefiles=anything
-* annex.backend=MD5E
+
+# SHA256E, not datalad's default MD5E. The corpus receipt in
+# data/corpus/<day>.edn records the sha256 of each archived feed, so a SHA256E
+# annex key is the SAME digest under a different spelling — the two planes
+# check each other instead of each asserting integrity in its own currency.
+# MD5E would also mean the annex's own verification rests on a hash that is
+# broken against collisions, for a corpus whose whole purpose is evidence.
+* annex.backend=SHA256E

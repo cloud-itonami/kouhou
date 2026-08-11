@@ -37,8 +37,16 @@
   source's briefing is simply not published; that is the PublicInfoGovernor
   functioning correctly, not a bug in this script.
 
+  A run persists to `data/` (canonical EDN, git) and `raw/` (the fetched feeds,
+  git-annex → s3.kotobase.net). See `kouhou.edn-store` for why the store is no
+  longer an atom, and `kouhou.raw-archive` for what the corpus receipt joins.
+
   Usage:  KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest
   Env:    KOUHOU_ALLOW_LIVE_INGEST  the live-fetch gate (kouhou.live-fetch)
+          KOUHOU_PUBLISH            \"0\" = ingest + store only (phase 0 observe)
+          KOUHOU_DATA_DIR           default \"data\"   (briefings/ledger/corpus)
+          KOUHOU_RAW_DIR            default \"raw\"    (archived feeds, annexed)
+          KOUHOU_MAX_SOURCES        cap the pass (smoke runs against real feeds)
           KOUHOU_REGISTRY_PATH      default \"registry/sources.seed.json\"
           KOUHOU_PDS                default kouhou.aozora/default-pds
           KOUHOU_IDENTITY_PATH      default \".kouhou/identity.edn\""
@@ -51,7 +59,7 @@
             [kouhou.edn-store :as edn-store]
             [kouhou.live-fetch :as live-fetch]
             [kouhou.operation :as op]
-            [kouhou.publisher :as publisher]
+            [kouhou.phase :as phase]
             [kouhou.raw-archive :as raw]
             [kouhou.store :as store])
   (:gen-class))
@@ -87,6 +95,21 @@
   []
   (not= "0" (System/getenv "KOUHOU_PUBLISH")))
 
+(defn- phase-for
+  "Store-only runs go through **phase 0 (observe)**, the repo's existing
+  shadow-record phase — not through a publisher that returns something
+  harmless.
+
+  The first cut of `KOUHOU_PUBLISH=0` swapped in `mock-publisher`, and the run
+  then reported `7 published` with `at://mock/…` URIs for records that were
+  never published anywhere. The commit node writes `:published?` into the
+  ledger from the PHASE, not from what came back, so the ledger would have
+  claimed publication too — a false fact in the one file whose entire job is
+  to be true. Phase 0 makes the claim and the reality the same thing, and it
+  is the mechanism the actor already had for exactly this."
+  [publish?]
+  (if publish? 1 0))
+
 (defn real-publisher
   "kouhou.aozora's real app-aozora Publisher, bound to the actor's own
   self-sovereign identity (fresh-minted on first run if `.kouhou/identity.edn`
@@ -108,10 +131,10 @@
   zero network I/O, the same seam `kouhou.live-fetch/fetch-source!` itself
   exposes.
 
-  `opts` (6-arity) turns on persistence: `{:raw-dir … :corpus-dir … :clock …}`
-  archives the fetched feed and appends a corpus receipt. Omitted (or nil) it
-  behaves exactly as before, which is what keeps the offline suite free of
-  disk I/O."
+  `opts` (6-arity) turns on persistence: `{:raw-dir … :corpus-dir … :clock …
+  :phase …}` archives the fetched feed and appends a corpus receipt. Omitted
+  (or nil) it behaves exactly as before, which is what keeps the offline suite
+  free of disk I/O."
   ([source hosts actor] (run-source! source hosts actor live-fetch/jvm-http-get (live-fetch/live-allowed?)))
   ([source hosts actor fetch-fn allowed?] (run-source! source hosts actor fetch-fn allowed? nil))
   ([source hosts actor fetch-fn allowed? opts]
@@ -156,7 +179,10 @@
         (let [req {:op :source/digest :source-id sid :url (:url item)
                    :title (:title item) :raw (:raw item)}
               r   (g/run* actor
-                          {:request req :context {:actor-id "kouhou" :phase 1 :registry hosts}}
+                          {:request req
+                           :context {:actor-id "kouhou"
+                                     :phase (:phase opts phase/default-phase)
+                                     :registry hosts}}
                           {:thread-id sid})
               disp (get-in r [:state :disposition])]
           (record! {:disposition disp
@@ -194,12 +220,16 @@
          ;; actor in its own ledger, and a corpus whose facts cannot say who
          ;; recorded them is worth less than one that can.
          id       (cacao/load-or-create-identity! (identity-path))
-         pub      (if publish? (real-publisher id) (publisher/mock-publisher))
+         ;; The publisher stays REAL in both modes; the phase is what decides
+         ;; whether it is ever called. One mechanism, not two.
+         pub      (real-publisher id)
          ;; The durable store. Was `store/seed-db` — an atom that took the
          ;; whole ledger with it when the process exited.
          s        (edn-store/edn-store data-dir)
          actor    (op/build s {:publisher pub})
-         opts     {:raw-dir raw-dir :corpus-dir (str (io/file data-dir "corpus"))}]
+         opts     {:raw-dir raw-dir
+                   :corpus-dir (str (io/file data-dir "corpus"))
+                   :phase (phase-for publish?)}]
      {:identity id
       :publish? publish?
       :store    s
