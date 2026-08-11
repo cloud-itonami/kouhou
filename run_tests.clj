@@ -7,6 +7,7 @@
             [kouhou.store-contract-test]
             [kouhou.edn-store-test]
             [kouhou.raw-archive-test]
+            [kouhou.verify-corpus-test]
             [kouhou.operation-test])
   (:gen-class))
 
@@ -16,6 +17,7 @@
              'kouhou.store-contract-test
              'kouhou.edn-store-test
              'kouhou.raw-archive-test
+             'kouhou.verify-corpus-test
              'kouhou.operation-test)]
     (when (pos? (+ (:fail res 0) (:error res 0)))
       (System/exit 1))))

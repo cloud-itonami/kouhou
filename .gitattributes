@@ -1,0 +1,27 @@
+# Which plane each path belongs to. Read `annex.largefiles` as "put this in
+# git-annex"; `nothing` means "an ordinary git blob".
+#
+# The split is by ROLE, not by size or by sniffing the bytes. datalad's
+# `text2git` config decides from content, which is exactly wrong here: the
+# briefings and the ledger are small semantic EDN that must stay reviewable in
+# a diff, while the archived feeds are text too — sniffing would put both in
+# git and defeat the point. The superproject's rule says the same thing in
+# general terms (「小さい semantic EDN … は通常の Git blob」 /
+# 「large EDN shard、raw corpus … は annex に置く」).
+
+# Default: git. Nothing gets annexed unless a rule below says so, so a new
+# path added later fails safe (reviewable) rather than silently disappearing
+# into the annex.
+* annex.largefiles=nothing
+
+# The fetched feeds. ~10 MB per full pass over 201 sources; a year of daily
+# passes would make cloning the actor require downloading its corpus.
+raw/** annex.largefiles=anything
+
+# SHA256E, not datalad's default MD5E. The corpus receipt in
+# data/corpus/<day>.edn records the sha256 of each archived feed, so a SHA256E
+# annex key is the SAME digest under a different spelling — the two planes
+# check each other instead of each asserting integrity in its own currency.
+# MD5E would also mean the annex's own verification rests on a hash that is
+# broken against collisions, for a corpus whose whole purpose is evidence.
+* annex.backend=SHA256E
