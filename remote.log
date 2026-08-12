@@ -1,1 +1,2 @@
+26fe7164-e1de-42a2-8bef-03466edc3891 bucket=gftdcojp-m365-annex chunk=50MiB datacenter=US encryption=none fileprefix=cloud-itonami-kouhou/ host=s3.us-west-004.backblazeb2.com name=b2 port=443 protocol=https signature=v4 storageclass=STANDARD type=S3 timestamp=1786556036s
 3ca426dc-e091-49ba-9a88-29ba4cb9879b bucket=cloud-itonami-kouhou chunk=50MiB datacenter=US encryption=none host=s3.kotobase.net name=kotobase port=443 protocol=https requeststyle=path signature=v4 storageclass=STANDARD type=S3 timestamp=1786410954s
