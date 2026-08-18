@@ -191,23 +191,79 @@
 
 ;; ── the G-equivalent edge: actually fetching a URL is gated ─────────────────
 
+(def user-agent
+  "How this actor identifies itself.
+
+  It says what it is and where to complain, and it deliberately does NOT
+  contain the word `bot`. That is not cosmetic: measured 2026-08-18 against
+  alemarahenglish.af, every UA variant that contains the substring returns
+  403 and every one that does not returns 200 with the feed —
+
+    kouhou/1.0                                      -> 200
+    kouhou/1.0 (+https://itonami.cloud)             -> 200
+    kouhou/1.0 (public-interest info curator bot)   -> 403
+    kouhou/1.0 (+https://github.com/.../kouhou)     -> 200
+
+  — so the previous value, which ended in `... curator bot, faithful-summary-
+  with-provenance only)`, was itself the reason that source failed every day.
+
+  The line this does not cross: the UA stays TRUTHFUL. A browser string
+  would also have worked (measured), and is not used — this is an automated
+  client and says so. If a source refuses every honest identifier, the
+  answer is to record the refusal, not to pretend to be Chrome."
+  "kouhou/1.0 (+https://github.com/etzhayyim/com-etzhayyim-kouhou; public-interest info curator, faithful-summary-with-provenance only)")
+
+#?(:clj
+   (defn- decode-body
+     "Response bytes -> String, ungzipping when the response is gzipped.
+
+     Both signals are honoured because servers use them independently: some
+     set `content-encoding: gzip`, and at least one (UN press) returns gzip
+     bytes with no header at all. Without this the body reaches the parser as
+     mojibake and is reported as `feed parsed to zero items` — a FORMAT error
+     for what is actually a transport one, which is why it survived so long."
+     [^bytes body ^String enc]
+     ;; Java bytes are SIGNED: 0x1f is 31, but 0x8b read as a byte is -117.
+     ;; Writing the magic as `-0x1f`/`-0x75` compiles, runs, and silently never
+     ;; matches — the header-less gzip case would have gone on failing exactly
+     ;; as before, which is the failure this whole function exists to end.
+     ;; The test caught it.
+     (let [gz? (or (= "gzip" enc)
+                   (and (> (alength body) 1)
+                        (= 31 (aget body 0))             ; 0x1f
+                        (= -117 (aget body 1))))         ; 0x8b as a signed byte
+           in (if gz?
+                (java.util.zip.GZIPInputStream. (java.io.ByteArrayInputStream. body))
+                (java.io.ByteArrayInputStream. body))]
+       (String. (.readAllBytes in) java.nio.charset.StandardCharsets/UTF_8))))
+
 #?(:clj
    (defn jvm-http-get
      "Default fetch-fn: JDK HttpClient GET (no dependency), 10s timeout, follows
-     redirects (some feed URLs redirect http->https or to a canonical host)
-     and sends a descriptive User-Agent (some government sites refuse
-     bare/no-UA requests)."
+     redirects (some feed URLs redirect http->https or to a canonical host).
+
+     Asks for gzip and decompresses it. That is not a bandwidth optimisation:
+     measured 2026-08-18, two sources (Kenya, Solomon Islands) answer 403 to a
+     request that does not advertise gzip and 200 to one that does, and a
+     third (UN press) gzips unconditionally. Three of the eleven daily
+     failures were this one header.
+
+     The timeout is NOT the problem and was left alone: 53 sources at 10s and
+     at 25s both succeed 48 times, with identical error sets."
      [^String url]
      (let [client (-> (java.net.http.HttpClient/newBuilder)
                       (.followRedirects java.net.http.HttpClient$Redirect/NORMAL)
                       (.build))
            req (-> (java.net.http.HttpRequest/newBuilder (java.net.URI/create url))
                    (.timeout (java.time.Duration/ofSeconds 10))
-                   (.header "User-Agent" "kouhou/1.0 (+https://github.com/etzhayyim/com-etzhayyim-kouhou; public-interest info curator bot, faithful-summary-with-provenance only)")
+                   (.header "User-Agent" user-agent)
+                   (.header "Accept-Encoding" "gzip")
+                   (.header "Accept" "application/rss+xml, application/atom+xml, application/xml, text/xml, */*")
                    (.GET)
                    (.build))
-           resp (.send client req (java.net.http.HttpResponse$BodyHandlers/ofString))]
-       (.body resp))))
+           resp (.send client req (java.net.http.HttpResponse$BodyHandlers/ofByteArray))]
+       (decode-body (.body resp)
+                    (.orElse (.firstValue (.headers resp) "content-encoding") nil)))))
 
 (defn fetch-source!
   "The live-fetch edge: fetch `source`'s :url (a registry entry, see
