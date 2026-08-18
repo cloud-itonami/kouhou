@@ -311,7 +311,7 @@
     "ooyake-unit": "gov.bol"
   },
   {
-    "url": "http://www.gov.br/rss.xml",
+    "url": "https://www.gov.br/rss.xml",
     "country": "BR",
     "host": "www.gov.br",
     "read-only": true,
@@ -320,7 +320,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 100 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.bra.executive's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 100 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.bra.executive's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.bra.executive"
   },
   {
@@ -519,7 +519,7 @@
     "ooyake-unit": "gov.com"
   },
   {
-    "url": "http://www.governo.cv/rss",
+    "url": "https://www.governo.cv/feed/",
     "country": "CV",
     "host": "www.governo.cv",
     "read-only": true,
@@ -528,7 +528,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.cpv's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.cpv's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.cpv"
   },
   {
@@ -1115,7 +1115,7 @@
     "ooyake-unit": "gov.isr"
   },
   {
-    "url": "http://www.governo.it/rss.xml",
+    "url": "https://www.governo.it/rss.xml",
     "country": "IT",
     "host": "www.governo.it",
     "read-only": true,
@@ -1124,7 +1124,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.ita.executive's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.ita.executive's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.ita.executive"
   },
   {
@@ -1335,7 +1335,7 @@
     "ooyake-unit": "gov.lby"
   },
   {
-    "url": "http://www.govt.lc/news/rss",
+    "url": "https://www.govt.lc/news/rss",
     "country": "LC",
     "host": "www.govt.lc",
     "read-only": true,
@@ -1344,7 +1344,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.lca's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.lca's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.lca"
   },
   {
@@ -1894,16 +1894,16 @@
     "ooyake-unit": "gov.prk.executive"
   },
   {
-    "url": "http://www.portugal.gov.pt/rss.xml",
+    "url": "https://portugal.gov.pt/rss.xml",
     "country": "PT",
-    "host": "www.portugal.gov.pt",
+    "host": "portugal.gov.pt",
     "read-only": true,
     "source-id": "gov-prt-exec",
     "name": "Government of Portugal",
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 28495 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.prt.executive's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 28495 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.prt.executive's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.prt.executive"
   },
   {
@@ -1946,16 +1946,16 @@
     "ooyake-unit": "gov.rou.executive"
   },
   {
-    "url": "http://www.government.ru/news/rss",
+    "url": "http://government.ru/news/rss/",
     "country": "RU",
-    "host": "www.government.ru",
+    "host": "government.ru",
     "read-only": true,
     "source-id": "gov-rus-exec",
     "name": "Government of Russia",
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.rus.executive's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.rus.executive's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.rus.executive"
   },
   {
@@ -1985,16 +1985,16 @@
     "ooyake-unit": "gov.sau.executive"
   },
   {
-    "url": "http://www.sudan.gov.sd/rss",
+    "url": "https://sudan.gov.sd/feed/",
     "country": "SD",
-    "host": "www.sudan.gov.sd",
+    "host": "sudan.gov.sd",
     "read-only": true,
     "source-id": "gov-sdn-exec",
     "name": "Sudan",
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.sdn's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.sdn's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.sdn"
   },
   {
@@ -2089,7 +2089,7 @@
     "ooyake-unit": "gov.som.executive"
   },
   {
-    "url": "http://www.srbija.gov.rs/rss",
+    "url": "https://www.srbija.gov.rs/rss/",
     "country": "RS",
     "host": "www.srbija.gov.rs",
     "read-only": true,
@@ -2098,7 +2098,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.srb.executive's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.srb.executive's :gov.unit/official-url. URL updated 2026-08-18: the http:// form redirects http->https->trailing-slash and the JDK client stops on the chain; this is the 200 that serves 20 items.",
     "ooyake-unit": "gov.srb.executive"
   },
   {
@@ -2271,7 +2271,7 @@
     "ooyake-unit": "gov.tjk"
   },
   {
-    "url": "http://www.turkmenistan.gov.tm/rss.xml",
+    "url": "https://www.turkmenistan.gov.tm/rss.xml",
     "country": "TM",
     "host": "www.turkmenistan.gov.tm",
     "read-only": true,
@@ -2280,7 +2280,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.tkm's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 20 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.tkm's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.tkm"
   },
   {
@@ -2516,7 +2516,7 @@
     "ooyake-unit": "gov.vut"
   },
   {
-    "url": "http://www.samoagovt.ws/feed/",
+    "url": "https://www.samoagovt.ws/feed/",
     "country": "WS",
     "host": "www.samoagovt.ws",
     "read-only": true,
@@ -2525,7 +2525,7 @@
     "verified": true,
     "domain": "general",
     "kind": "government-pr",
-    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.wsm's :gov.unit/official-url.",
+    "comment": "discover-sources 2026-07-26: HTTP 200, rss, 10 items. Feed URL discovered from the government homepage this run. Candidate derived from ooyake gov.wsm's :gov.unit/official-url. URL pinned 2026-08-18 to the address that actually serves the feed (was a redirect chain).",
     "ooyake-unit": "gov.wsm"
   },
   {

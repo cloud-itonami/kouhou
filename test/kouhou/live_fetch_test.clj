@@ -202,3 +202,50 @@
     (is (every? #(ingest/registered-source? hosts (:url %)) items))
     (is (not (ingest/registered-source? governor/default-registry "https://www.whitehouse.gov/news/feed/"))
         "a real world-scope registry host is intentionally NOT in the R0 default-registry fixture")))
+
+;; ─────────────────────────────────────────────────────────── transport
+;;
+;; These two guard the difference between "this source has no news today" and
+;; "we could not read what it sent". Both failures arrived at the parser as
+;; `feed parsed to zero items`, i.e. a FORMAT verdict on a TRANSPORT problem,
+;; which is why they survived in the daily run for a week without anyone
+;; being able to see them (measured 2026-08-18: 11 of 53 sources failing,
+;; 5 of them for these two reasons).
+
+(deftest the-user-agent-does-not-say-bot
+  (testing "measured 2026-08-18 against alemarahenglish.af: every UA
+            containing the substring `bot` returns 403 and every one without
+            it returns 200 with the feed. The previous value ended in
+            `... curator bot, ...` and that source failed every single day."
+    (is (not (clojure.string/includes? (clojure.string/lower-case live-fetch/user-agent) "bot"))))
+
+  (testing "and it still identifies this client honestly — the fix is to stop
+            tripping a substring filter, NOT to impersonate a browser"
+    (is (clojure.string/starts-with? live-fetch/user-agent "kouhou/"))
+    (is (clojure.string/includes? live-fetch/user-agent "http"))
+    (is (not (clojure.string/includes? live-fetch/user-agent "Mozilla")))))
+
+(deftest gzip-bodies-are-decoded
+  (let [gzip-bytes (fn [^String s]
+                     (let [bos (java.io.ByteArrayOutputStream.)]
+                       (with-open [gz (java.util.zip.GZIPOutputStream. bos)]
+                         (.write gz (.getBytes s "UTF-8")))
+                       (.toByteArray bos)))
+        decode #'live-fetch/decode-body
+        feed "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel><item><title>x</title></item></channel></rss>"]
+
+    (testing "declared by the header"
+      (is (= feed (decode (gzip-bytes feed) "gzip"))))
+
+    (testing "NOT declared — at least one source (UN press) gzips
+              unconditionally and sends no content-encoding, so the magic
+              bytes have to be enough"
+      (is (= feed (decode (gzip-bytes feed) nil))))
+
+    (testing "a plain body is passed through unchanged"
+      (is (= feed (decode (.getBytes feed "UTF-8") nil))))
+
+    (testing "and the result is what the parser can actually read — the bug
+              was that it received compressed bytes and called them a format
+              it did not recognise"
+      (is (= 1 (count (live-fetch/parse-feed (decode (gzip-bytes feed) "gzip"))))))))
