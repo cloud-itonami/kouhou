@@ -6,10 +6,12 @@
         io.github.com-junkawasaki/langgraph-clj
         {:local/root "../../kotoba-lang/langgraph"}}
  :aliases
- {;; offline workspace dev — pin transitive langchain-clj to local checkout
-  :dev {:override-deps
-        {io.github.com-junkawasaki/langchain-clj
-         {:local/root "../../kotoba-lang/langchain"}}}
+ {;; This alias held an :override-deps entry for the retired coordinate
+  ;; io.github.com-junkawasaki/langchain-clj. langgraph declares the same
+  ;; library as io.github.kotoba-lang/langchain, so the entry matched no
+  ;; node in the resolved tree and never reached the classpath -- verified
+  ;; with `clojure -Stree`/-Spath, unchanged before and after removal.
+  :dev {}
   ;; clojure -M:dev:run → drive one source digest through the actor
   :run {:main-opts ["-m" "kouhou.sim"]}
   ;; KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest → real fetch + real publish
