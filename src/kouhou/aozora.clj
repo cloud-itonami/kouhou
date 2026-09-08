@@ -9,7 +9,7 @@
   JSON pair passed by the caller, so this namespace stays dependency-free.
   Publication is the actor's own SPEECH (ADR-2606281500) — NOT actuation."
   (:require [kotoba.net.jvm-host :as jvm-host]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kouhou.cacao :as cacao]
             [kouhou.publisher :as publisher])
            [java.time Instant]

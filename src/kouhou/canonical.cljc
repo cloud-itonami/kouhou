@@ -13,7 +13,7 @@
   different digest for identical content. `canonical-str` sorts every map by
   the printed form of its key, recursively, which is total (keywords, strings,
   numbers and symbols all compare) where `compare` on mixed key types throws."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- key-order
   "Total order over map keys: compare their printed forms. `compare` alone

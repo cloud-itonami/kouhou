@@ -43,7 +43,7 @@
   archive file that lies about itself — bytes in one encoding, a prolog naming
   another — which every XML parser downstream would then decode wrongly."
   (:require [clojure.java.io :as io]
-            [clojure.string :as str])
+            [kotoba.lang.text :as str])
   (:import (java.security MessageDigest)))
 
 (defn sha256-hex
@@ -62,7 +62,7 @@
   (if (str/starts-with? (str/triml body) "<?xml")
     (str/replace-first body xml-decl-encoding
                        (fn [[whole pre enc post]]
-                         (if (= "utf-8" (str/lower-case enc))
+                         (if (= "utf-8" (str/lower enc))
                            whole
                            (str pre "UTF-8" post))))
     body))

@@ -28,7 +28,7 @@
   not a live fetch, so the pure parsing fns below have no gate; only
   `fetch-source!` (the #?(:clj) HTTP edge) checks it."
   (:require #?(:clj [kotoba.net.jvm-host :as jvm-host])
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kouhou.ingest :as ingest]))
 
 ;; ── live-ingest gate (KOUHOU_ALLOW_LIVE_INGEST) ─────────────────────────────

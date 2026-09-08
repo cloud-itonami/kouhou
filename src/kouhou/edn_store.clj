@@ -46,7 +46,7 @@
   their in-memory `seq` counters would collide, so do not run two."
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kouhou.canonical :as canon]
             [kouhou.store :as store])
   (:import (java.time ZoneOffset ZonedDateTime)
