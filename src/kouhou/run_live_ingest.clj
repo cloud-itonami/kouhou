@@ -52,7 +52,7 @@
           KOUHOU_IDENTITY_PATH      default \".kouhou/identity.edn\""
   (:require [clojure.data.json :as json]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [langgraph.graph :as g]
             [kouhou.aozora :as aozora]
             [kouhou.cacao :as cacao]

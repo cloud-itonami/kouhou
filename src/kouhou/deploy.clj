@@ -15,7 +15,7 @@
          KOUHOU_OLLAMA_MODEL (default gemma-4-E4B qat)"
   (:require [kotoba.net.jvm-host :as jvm-host]
             [clojure.data.json :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [langchain.model :as model]
             [langgraph.graph :as g]
             [kouhou.advisor :as advisor]

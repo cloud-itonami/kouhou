@@ -7,7 +7,7 @@
   here builds a SECOND store over the same directory and asserts against that
   one; only bytes on disk can carry a value across that boundary."
   (:require [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [kouhou.canonical :as canon]
             [kouhou.edn-store :as sut]

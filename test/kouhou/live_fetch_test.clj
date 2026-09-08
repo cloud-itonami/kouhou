@@ -5,7 +5,7 @@
   operates on inline fixture text, and `fetch-source!`'s gate-refusal path is
   exercised with the gate OFF (the real default; this suite never sets
   KOUHOU_ALLOW_LIVE_INGEST)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.lang.text] [clojure.test :refer [deftest is testing]]
             [kouhou.governor :as governor]
             [kouhou.ingest :as ingest]
             [kouhou.live-fetch :as live-fetch]))
@@ -217,13 +217,13 @@
             containing the substring `bot` returns 403 and every one without
             it returns 200 with the feed. The previous value ended in
             `... curator bot, ...` and that source failed every single day."
-    (is (not (clojure.string/includes? (clojure.string/lower-case live-fetch/user-agent) "bot"))))
+    (is (not (kotoba.lang.text/includes? (kotoba.lang.text/lower live-fetch/user-agent) "bot"))))
 
   (testing "and it still identifies this client honestly — the fix is to stop
             tripping a substring filter, NOT to impersonate a browser"
-    (is (clojure.string/starts-with? live-fetch/user-agent "kouhou/"))
-    (is (clojure.string/includes? live-fetch/user-agent "http"))
-    (is (not (clojure.string/includes? live-fetch/user-agent "Mozilla")))))
+    (is (kotoba.lang.text/starts-with? live-fetch/user-agent "kouhou/"))
+    (is (kotoba.lang.text/includes? live-fetch/user-agent "http"))
+    (is (not (kotoba.lang.text/includes? live-fetch/user-agent "Mozilla")))))
 
 (deftest gzip-bodies-are-decoded
   (let [gzip-bytes (fn [^String s]
