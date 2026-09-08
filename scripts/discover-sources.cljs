@@ -36,7 +36,7 @@
 ;; 到達性確認だけで、registry の `verified` フィールドが元々表していた主張を、人の記憶
 ;; ではなく実測に固定する。PublicInfoGovernor の判定には一切触れない。
 
-(require '[clojure.string :as str]
+(require '[kotoba.lang.text :as str]
          '["node:fs" :as fs])
 
 (def argv (vec *command-line-args*))
