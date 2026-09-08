@@ -6,32 +6,21 @@
   = the off-switch, ADR-2606281500). Ported shape from tsumugu.kotoba /
   tashikame.aozora.
 
-  I/O is injected: an http-fn (default JDK java.net.http, no dependency) and a
   JSON pair passed by the caller, so this namespace stays dependency-free.
   Publication is the actor's own SPEECH (ADR-2606281500) — NOT actuation."
-  (:require [clojure.string :as str]
+  (:require [kotoba.net.jvm-host :as jvm-host]
+            [clojure.string :as str]
             [kouhou.cacao :as cacao]
             [kouhou.publisher :as publisher])
-  (:import [java.net URI]
-           [java.net.http HttpClient HttpRequest HttpRequest$BodyPublishers
-            HttpResponse$BodyHandlers]
            [java.time Instant]
            [java.util UUID]))
 
 (def default-pds "https://pds.aozora.app")
 
 (defn jvm-http-fn
-  "host-caps :http-fn backed by the JDK HTTP client (no dependency)."
   [{:keys [url method headers body]}]
-  (let [b (HttpRequest/newBuilder (URI/create url))]
-    (doseq [[k v] headers] (.header b k v))
-    (let [req  (-> b (.method (str/upper-case (name (or method :post)))
-                             (if body
-                               (HttpRequest$BodyPublishers/ofString body)
-                               (HttpRequest$BodyPublishers/noBody)))
-                   (.build))
-          resp (.send (HttpClient/newHttpClient) req (HttpResponse$BodyHandlers/ofString))]
-      {:status (.statusCode resp) :body (.body resp)})))
+  ((jvm-host/http-transport {:timeout-seconds 120})
+   {:url url :method (or method :post) :headers headers :body body}))
 
 (defn aozora-publisher
   "Returns a `kouhou.publisher/Publisher` that creates publicBriefing records on
