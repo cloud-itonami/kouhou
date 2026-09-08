@@ -27,7 +27,8 @@
   GET is refused unless this env var is set. Parsing text you already have is
   not a live fetch, so the pure parsing fns below have no gate; only
   `fetch-source!` (the #?(:clj) HTTP edge) checks it."
-  (:require [clojure.string :as str]
+  (:require #?(:clj [kotoba.net.jvm-host :as jvm-host])
+            [clojure.string :as str]
             [kouhou.ingest :as ingest]))
 
 ;; ── live-ingest gate (KOUHOU_ALLOW_LIVE_INGEST) ─────────────────────────────
@@ -251,19 +252,17 @@
      The timeout is NOT the problem and was left alone: 53 sources at 10s and
      at 25s both succeed 48 times, with identical error sets."
      [^String url]
-     (let [client (-> (java.net.http.HttpClient/newBuilder)
-                      (.followRedirects java.net.http.HttpClient$Redirect/NORMAL)
-                      (.build))
-           req (-> (java.net.http.HttpRequest/newBuilder (java.net.URI/create url))
-                   (.timeout (java.time.Duration/ofSeconds 10))
-                   (.header "User-Agent" user-agent)
-                   (.header "Accept-Encoding" "gzip")
-                   (.header "Accept" "application/rss+xml, application/atom+xml, application/xml, text/xml, */*")
-                   (.GET)
-                   (.build))
-           resp (.send client req (java.net.http.HttpResponse$BodyHandlers/ofByteArray))]
-       (decode-body (.body resp)
-                    (.orElse (.firstValue (.headers resp) "content-encoding") nil)))))
+     ;; delegated to kotoba.net.jvm-host (:follow-redirects + :as-bytes); the
+     ;; gzip decode stays here because java.util.zip is a host-side detail
+     (let [resp ((jvm-host/http-transport {:timeout-seconds 10
+                                           :follow-redirects true
+                                           :as-bytes true})
+                 {:url url :method :get
+                  :headers {"User-Agent" user-agent
+                            "Accept-Encoding" "gzip"
+                            "Accept" "application/rss+xml, application/atom+xml, application/xml, text/xml, */*"}})]
+       (decode-body (:body resp)
+                    (get-in resp [:headers "content-encoding"]))))
 
 (defn fetch-source!
   "The live-fetch edge: fetch `source`'s :url (a registry entry, see
