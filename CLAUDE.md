@@ -45,12 +45,12 @@ without an actual fetch.
 
 ## Live fetch (2026-07-19, R0→R1)
 
-`src/kouhou/live_fetch.cljc` (real HTTP GET + RSS 2.0 / RSS 1.0 (RDF) / Atom
+`src/kouhou/live_fetch.cljk` (real HTTP GET + RSS 2.0 / RSS 1.0 (RDF) / Atom
 1.0 parsing, mirroring kawaraban's already-landed `live_fetch.cljc`,
-ADR-2607110200) + `src/kouhou/run_live_ingest.clj` (non-interactive
+ADR-2607110200) + `src/kouhou/run_live_ingest.cljk` (non-interactive
 entrypoint, `clojure -M:live-ingest`) close the "real registry fetch" gap
 `README.md`'s R0 status line used to name as not-yet-wired. Gated behind
-`KOUHOU_ALLOW_LIVE_INGEST` (default OFF). **`src/kouhou/governor.cljc`'s
+`KOUHOU_ALLOW_LIVE_INGEST` (default OFF). **`src/kouhou/governor.cljk`'s
 `default-registry` was intentionally NOT synced to `sources.seed.json`** — it
 stays the R0 offline-test fixture the existing test suite is written against;
 the live path instead loads the real registry at runtime
