@@ -29,7 +29,7 @@ revocable member CACAO leash. Low-confidence briefings still publish, tagged
   `tashikame.aozora` (self-sovereign Ed25519 identity + app-aozora createRecord).
 - The actor's own Ed25519 identity lives in `.kouhou/identity.edn` (gitignored)
   — NEVER commit a private key.
-- `clojure -M:lint` (clj-kondo, errors fail) / `clojure -M:dev:test`.
+- `kbb -M:lint` (clj-kondo, errors fail) / `kbb -M:dev:test`.
 
 ## Source registry (2026-07-19, ADR-2607197800)
 
@@ -48,7 +48,7 @@ without an actual fetch.
 `src/kouhou/live_fetch.cljk` (real HTTP GET + RSS 2.0 / RSS 1.0 (RDF) / Atom
 1.0 parsing, mirroring kawaraban's already-landed `live_fetch.cljc`,
 ADR-2607110200) + `src/kouhou/run_live_ingest.cljk` (non-interactive
-entrypoint, `clojure -M:live-ingest`) close the "real registry fetch" gap
+entrypoint, `kbb -M:live-ingest`) close the "real registry fetch" gap
 `README.md`'s R0 status line used to name as not-yet-wired. Gated behind
 `KOUHOU_ALLOW_LIVE_INGEST` (default OFF). **`src/kouhou/governor.cljk`'s
 `default-registry` was intentionally NOT synced to `sources.seed.json`** — it

@@ -10,7 +10,7 @@
   This entrypoint proves real-LLM → PublicInfoGovernor → (mock) publish against
   the live Murakumo model.
 
-  Usage: clojure -M:dev -m kouhou.deploy \"<title>\" \"<url>\" \"<raw text>\"
+  Usage: kbb -M:dev -m kouhou.deploy \"<title>\" \"<url>\" \"<raw text>\"
   Env:   KOUHOU_OLLAMA_URL (default http://127.0.0.1:11434)
          KOUHOU_OLLAMA_MODEL (default gemma-4-E4B qat)"
   (:require [kotoba.net.jvm-host :as jvm-host]
@@ -59,7 +59,7 @@
   "Live identify test (ADR-2607022300 identify facet): generate the actor's
   self-sovereign did:key, then createSession(self-CACAO)→JWT→createRecord a
   profile record to pds.aozora.app. Proves the app-aozora-pds auth flow.
-  clojure -M:dev -m kouhou.deploy identify-live"
+  kbb -M:dev -m kouhou.deploy identify-live"
   []
   (let [id  (cacao/load-or-create-identity! ".kouhou/identity.edn")
         pub (aozora/aozora-publisher {:pds        "https://pds.aozora.app"

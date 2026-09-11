@@ -27,7 +27,7 @@
   identity), and the superproject keeps them separate for the same reason
   (`scripts/annex-custody-verify.cljs`).
 
-      clojure -M:verify-corpus"
+      kbb -M:verify-corpus"
   (:require [clojure.java.io :as io]
             [kouhou.edn-store :as edn-store]
             [kouhou.raw-archive :as raw])

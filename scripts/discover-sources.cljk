@@ -1,10 +1,10 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; scripts/discover-sources.cljk — kouhou 広報 — 政府公式サイトから公報 feed を発見し、
 ;; `registry/sources.seed.json` を実測で育てる（com-junkawasaki/root ADR-2607253400）。
 ;;
-;;   nbb scripts/discover-sources.cljk                       # 既存 registry を再測定
-;;   nbb scripts/discover-sources.cljk --candidates <f.json> # 候補を足して発見を試みる
-;;   nbb scripts/discover-sources.cljk --apply               # 結果を registry に書き戻す
+;;   kbb --backend sci scripts/discover-sources.cljk                       # 既存 registry を再測定
+;;   kbb --backend sci scripts/discover-sources.cljk --candidates <f.json> # 候補を足して発見を試みる
+;;   kbb --backend sci scripts/discover-sources.cljk --apply               # 結果を registry に書き戻す
 ;;
 ;; ## なぜこれが要るか
 ;;

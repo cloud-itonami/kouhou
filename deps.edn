@@ -15,14 +15,14 @@
   ;; io.github.com-junkawasaki/langchain-clj. langgraph declares the same
   ;; library as io.github.kotoba-lang/langchain, so the entry matched no
   ;; node in the resolved tree and never reached the classpath -- verified
-  ;; with `clojure -Stree`/-Spath, unchanged before and after removal.
+  ;; with `kbb -Stree`/-Spath, unchanged before and after removal.
   :dev {}
-  ;; clojure -M:dev:run → drive one source digest through the actor
+  ;; kbb -M:dev:run → drive one source digest through the actor
   :run {:main-opts ["-m" "kouhou.sim"]}
-  ;; KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest → real fetch + real publish
+  ;; KOUHOU_ALLOW_LIVE_INGEST=1 kbb -M:live-ingest → real fetch + real publish
   ;; over every :verified registry/sources.seed.json source (kouhou.run-live-ingest).
   :live-ingest {:main-opts ["-m" "kouhou.run-live-ingest"]}
-  ;; clojure -M:verify-corpus →各 corpus receipt を実ファイルと突き合わせる
+  ;; kbb -M:verify-corpus →各 corpus receipt を実ファイルと突き合わせる
   ;; （identity の検査。custody は git annex fsck --from kotobase が別に答える）
   :verify-corpus {:main-opts ["-m" "kouhou.verify-corpus"]}
   :test {:extra-paths ["test"]
