@@ -16,9 +16,9 @@ poster: containment (`organizer`) + independent censor (`PublicInfoGovernor`)
 | Advisor (curation) | ✅ deterministic `mock-advisor` (default) ‖ real-LLM `llm-advisor` on Murakumo, live-verified (`kouhou.deploy`) |
 | Registry | ✅ `registry/sources.seed.json` — 8 entries, world-scope (ADR-2607197800), 7 spot-verified live |
 | **Live fetch** | ✅ **NEW (this change)** — `kouhou.live-fetch`: real HTTP GET + RSS 2.0 / RSS 1.0 (RDF) / Atom 1.0 |
-| **Live-ingest entrypoint** | ✅ **NEW (this change)** — `kouhou.run-live-ingest`, `clojure -M:live-ingest` |
-| Tests | ✅ `clojure -M:dev:test`: **38 tests / 97 assertions / 0 failures** (2026-07-19) |
-| Lint | ✅ `clojure -M:lint`: 0 errors |
+| **Live-ingest entrypoint** | ✅ **NEW (this change)** — `kouhou.run-live-ingest`, `kbb -M:live-ingest` |
+| Tests | ✅ `kbb -M:dev:test`: **38 tests / 97 assertions / 0 failures** (2026-07-19) |
+| Lint | ✅ `kbb -M:lint`: 0 errors |
 
 ## What "R1" means here, honestly
 
@@ -35,7 +35,7 @@ the aozora Publisher were already real and already live-verified via
   `kouhou.ingest/registered-source?` UNCHANGED). Covers all three feed
   formats the world-scope registry actually uses: RSS 2.0 (US/DE/FR/EU/UN),
   RSS 1.0/RDF (JP 政府広報オンライン), Atom (GB gov.uk).
-- **`src/kouhou/run_live_ingest.cljk`** — `clojure -M:live-ingest`, gated
+- **`src/kouhou/run_live_ingest.cljk`** — `kbb -M:live-ingest`, gated
   behind `KOUHOU_ALLOW_LIVE_INGEST` (default OFF — **code-complete but
   off-by-default**, same honesty ladder as kawaraban's own R0→R1: the code
   exists and is tested, but a real network fetch + real publish only happens
@@ -82,7 +82,7 @@ the aozora Publisher were already real and already live-verified via
   ingest path before it can be added to a live-ingest run.
 - A high-water-mark (kawaraban's `data/ingest/last-seen.edn` pattern,
   ADR-2607110200 addendum 2) is not yet implemented here — a re-run of
-  `clojure -M:live-ingest` will re-propose each source's then-current latest
+  `kbb -M:live-ingest` will re-propose each source's then-current latest
   item every time, not just genuinely new items since the last run. Because
   `kouhou.operation`'s `:rkey` is the source-id (deterministic), a repeat
   commit for the same source safely UPDATES that source's one aozora record

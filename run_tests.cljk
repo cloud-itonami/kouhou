@@ -1,7 +1,7 @@
 (ns kouhou.run-tests
   "Test runner for com-etzhayyim-kouhou (new actors ship run_tests.cljk, not
-  .sh — per etzhayyim/root CLAUDE.md). Canonical path: `clojure -M:dev:test`
-  (cognitect test-runner). This runner: `clojure -M -m kouhou.run-tests`."
+  .sh — per etzhayyim/root CLAUDE.md). Canonical path: `kbb -M:dev:test`
+  (cognitect test-runner). This runner: `kbb -M -m kouhou.run-tests`."
   (:require [clojure.test :refer [run-tests]]
             [kouhou.governor-contract-test]
             [kouhou.store-contract-test]

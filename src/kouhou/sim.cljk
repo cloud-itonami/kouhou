@@ -1,7 +1,7 @@
 (ns kouhou.sim
   "Offline demo: drive two source digests (one registered, one unregistered)
   through the kouhou actor on a MemStore + mock organizer + mock publisher
-  (no network). `clojure -M:dev:run`."
+  (no network). `kbb -M:dev:run`."
   (:require [langgraph.graph :as g]
             [kouhou.operation :as op]
             [kouhou.store :as store]

@@ -41,7 +41,7 @@
   git-annex → s3.kotobase.net). See `kouhou.edn-store` for why the store is no
   longer an atom, and `kouhou.raw-archive` for what the corpus receipt joins.
 
-  Usage:  KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest
+  Usage:  KOUHOU_ALLOW_LIVE_INGEST=1 kbb -M:live-ingest
   Env:    KOUHOU_ALLOW_LIVE_INGEST  the live-fetch gate (kouhou.live-fetch)
           KOUHOU_PUBLISH            \"0\" = ingest + store only (phase 0 observe)
           KOUHOU_DATA_DIR           default \"data\"   (briefings/ledger/corpus)

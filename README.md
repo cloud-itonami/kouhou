@@ -13,7 +13,7 @@ app-aozora** (collection `com.etzhayyim.apps.kouhou.publicBriefing`).
 **ADR**: ADR-2607022210 (superproject, R0 scaffold) + `docs/adr/0001-architecture.md` (正本).
 **Status**: **R1** (2026-07-19) — real HTTP fetch (`src/kouhou/live_fetch.cljk`,
 RSS 2.0 / RSS 1.0 (RDF) / Atom 1.0) + a non-interactive live-ingest entrypoint
-(`src/kouhou/run_live_ingest.cljk`, `clojure -M:live-ingest`) now exist,
+(`src/kouhou/run_live_ingest.cljk`, `kbb -M:live-ingest`) now exist,
 mirroring kawaraban's already-landed R0→R1 live-fetch (ADR-2607110200). Gated
 behind `KOUHOU_ALLOW_LIVE_INGEST` (default OFF — code-complete but off by
 default until an operator sets the env var). Uses the framework default
@@ -166,7 +166,7 @@ rule; the annex remote is `kotobase` (`s3.kotobase.net`, bucket
 `cloud-itonami-kouhou`).
 
 ```bash
-clojure -M:verify-corpus                # every receipt vs the file on disk
+kbb -M:verify-corpus                # every receipt vs the file on disk
 git annex copy raw/ --to kotobase --jobs 1   # jobs=1: one head per bucket
 datalad drop raw/                       # local bytes go, pointers stay
 datalad get  raw/2026-08-11             # fetch a day back
@@ -200,20 +200,20 @@ lines that did not fail.
 ## Run
 
 ```bash
-clojure -M:lint          # clj-kondo, errors fail
-clojure -M:dev:test      # cognitect test-runner (canonical)
-clojure -M:dev:run       # offline demo (one registered + one unregistered source)
+kbb -M:lint          # clj-kondo, errors fail
+kbb -M:dev:test      # cognitect test-runner (canonical)
+kbb -M:dev:run       # offline demo (one registered + one unregistered source)
 
 # real fetch + real publish over every "verified": true registry/sources.seed.json
 # source — refuses (no network call) unless the gate is set. Founder/Council explicit
 # go-live instruction required to set this (ADR-2607110200 precedent).
-KOUHOU_ALLOW_LIVE_INGEST=1 clojure -M:live-ingest
+KOUHOU_ALLOW_LIVE_INGEST=1 kbb -M:live-ingest
 
 # ingest + persist WITHOUT publishing — the two capabilities are separable.
 # Fetching a registered government feed onto our own disk is read-only and
 # reversible; publishing to a shared PDS is neither. This is the form an
 # unattended corpus run should take.
-KOUHOU_ALLOW_LIVE_INGEST=1 KOUHOU_PUBLISH=0 clojure -M:live-ingest
+KOUHOU_ALLOW_LIVE_INGEST=1 KOUHOU_PUBLISH=0 kbb -M:live-ingest
 ```
 
 | env | default | effect |
