@@ -1,10 +1,10 @@
 #!/usr/bin/env nbb
-;; scripts/discover-sources.cljs — kouhou 広報 — 政府公式サイトから公報 feed を発見し、
+;; scripts/discover-sources.cljk — kouhou 広報 — 政府公式サイトから公報 feed を発見し、
 ;; `registry/sources.seed.json` を実測で育てる（com-junkawasaki/root ADR-2607253400）。
 ;;
-;;   nbb scripts/discover-sources.cljs                       # 既存 registry を再測定
-;;   nbb scripts/discover-sources.cljs --candidates <f.json> # 候補を足して発見を試みる
-;;   nbb scripts/discover-sources.cljs --apply               # 結果を registry に書き戻す
+;;   nbb scripts/discover-sources.cljk                       # 既存 registry を再測定
+;;   nbb scripts/discover-sources.cljk --candidates <f.json> # 候補を足して発見を試みる
+;;   nbb scripts/discover-sources.cljk --apply               # 結果を registry に書き戻す
 ;;
 ;; ## なぜこれが要るか
 ;;
@@ -22,7 +22,7 @@
 ;;
 ;; homepage の `<link rel="alternate" type="application/rss+xml">` を読み、無ければ
 ;; よくあるパスを順に試し、**実際に item を返した URL だけ**を採る。判定規則は
-;; `src/kouhou/live_fetch.cljc` の `parse-feed` と揃える（<rss / <rdf:RDF なら <item>、
+;; `src/kouhou/live_fetch.cljk` の `parse-feed` と揃える（<rss / <rdf:RDF なら <item>、
 ;; <feed> なら <entry>）——ここで 0 件なら本番の ingest でも 0 件になる。
 ;;
 ;; **403 を返すサイトは未達として記録し、回避しない。** ブラウザの User-Agent を騙って

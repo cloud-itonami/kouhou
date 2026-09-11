@@ -28,14 +28,14 @@ Before this change, `README.md`'s own status line read: "real LLM summarizer
 the aozora Publisher were already real and already live-verified via
 `kouhou.deploy`). This change closes exactly that gap:
 
-- **`src/kouhou/live_fetch.cljc`** — a minimal, dependency-free RSS 2.0 /
+- **`src/kouhou/live_fetch.cljk`** — a minimal, dependency-free RSS 2.0 /
   RSS 1.0 (RDF) / Atom 1.0 scanner (ported/adapted from kawaraban's
   already-landed `live_fetch.cljc`, ADR-2607110200 — same "inherit the gate,
   don't reinvent it" discipline: parsed items flow through
   `kouhou.ingest/registered-source?` UNCHANGED). Covers all three feed
   formats the world-scope registry actually uses: RSS 2.0 (US/DE/FR/EU/UN),
   RSS 1.0/RDF (JP 政府広報オンライン), Atom (GB gov.uk).
-- **`src/kouhou/run_live_ingest.clj`** — `clojure -M:live-ingest`, gated
+- **`src/kouhou/run_live_ingest.cljk`** — `clojure -M:live-ingest`, gated
   behind `KOUHOU_ALLOW_LIVE_INGEST` (default OFF — **code-complete but
   off-by-default**, same honesty ladder as kawaraban's own R0→R1: the code
   exists and is tested, but a real network fetch + real publish only happens

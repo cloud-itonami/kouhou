@@ -11,9 +11,9 @@ app-aozora** (collection `com.etzhayyim.apps.kouhou.publicBriefing`).
 `orgs/etzhayyim/root/80-data/kotoba-rad/kouhou.identity.journal.edn`).
 **Namespace**: `com.etzhayyim.apps.kouhou.*`.
 **ADR**: ADR-2607022210 (superproject, R0 scaffold) + `docs/adr/0001-architecture.md` (正本).
-**Status**: **R1** (2026-07-19) — real HTTP fetch (`src/kouhou/live_fetch.cljc`,
+**Status**: **R1** (2026-07-19) — real HTTP fetch (`src/kouhou/live_fetch.cljk`,
 RSS 2.0 / RSS 1.0 (RDF) / Atom 1.0) + a non-interactive live-ingest entrypoint
-(`src/kouhou/run_live_ingest.clj`, `clojure -M:live-ingest`) now exist,
+(`src/kouhou/run_live_ingest.cljk`, `clojure -M:live-ingest`) now exist,
 mirroring kawaraban's already-landed R0→R1 live-fetch (ADR-2607110200). Gated
 behind `KOUHOU_ALLOW_LIVE_INGEST` (default OFF — code-complete but off by
 default until an operator sets the env var). Uses the framework default
@@ -110,7 +110,7 @@ later following the same honesty discipline.
 
 **Important limitation, updated 2026-07-19 (R0→R1 live-fetch): this file IS now
 what a live run enforces, but `kouhou.governor/default-registry` intentionally
-still is not.** `kouhou.governor/default-registry` (in `src/kouhou/governor.cljc`)
+still is not.** `kouhou.governor/default-registry` (in `src/kouhou/governor.cljk`)
 still contains only the OLD fictional `.example.` hosts, and stays that way ON
 PURPOSE — it is the R0 offline-test fixture the existing test suite
 (`governor-contract-test` et al.) is written against, and changing it would be
