@@ -50,8 +50,8 @@
           KOUHOU_REGISTRY_PATH      default \"registry/sources.seed.json\"
           KOUHOU_PDS                default kouhou.aozora/default-pds
           KOUHOU_IDENTITY_PATH      default \".kouhou/identity.edn\""
-  (:require [clojure.data.json :as json]
-            [clojure.java.io :as io]
+  (:require [kotoba.json :as json]
+            [kotoba.io :as io]
             [kotoba.lang.text :as str]
             [langgraph.graph :as g]
             [kouhou.aozora :as aozora]

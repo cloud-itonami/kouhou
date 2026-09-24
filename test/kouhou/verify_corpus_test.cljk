@@ -4,19 +4,17 @@
   whose bytes no longer match its receipt has to come back `:mismatch`. The
   passing case is asserted alongside it in the same test, because a detector
   that fails everything is equally useless."
-  (:require [clojure.java.io :as io]
+  (:require [kotoba.io :as io]
             [kotoba.test :refer [deftest is testing]]
             [kouhou.canonical :as canon]
             [kouhou.raw-archive :as raw]
-            [kouhou.verify-corpus :as sut])
-  (:import (java.nio.file Files)
-           (java.nio.file.attribute FileAttribute)))
+            [kouhou.verify-corpus :as sut]))
 
 (defn- tmp-dir []
-  (str (Files/createTempDirectory "kouhou-verify" (into-array FileAttribute []))))
+  (str (io/temp-dir "kouhou-verify")))
 
 (defn- rm-rf [dir]
-  (doseq [f (reverse (file-seq (io/file dir)))] (.delete ^java.io.File f)))
+  (doseq [f (reverse (io/file-seq (io/file dir)))] (io/delete f)))
 
 (defn- corpus! [data-dir receipts]
   (let [f (io/file data-dir "corpus" "2026-08-11.edn")]
@@ -48,7 +46,7 @@
             (is (= :mismatch (:content (first (:failures r)))))))
         (testing "dropped bytes are absent, not failed"
           (spit (:path bad) "<rss><channel/></rss>")  ; restore
-          (.delete (io/file (:path good)))
+          (io/delete (io/file (:path good)))
           (let [r (sut/report (mapv sut/check (sut/receipts data)))]
             (is (= 1 (get-in r [:content :absent])))
             (is (empty? (:failures r))

@@ -5,7 +5,7 @@
   operates on inline fixture text, and `fetch-source!`'s gate-refusal path is
   exercised with the gate OFF (the real default; this suite never sets
   KOUHOU_ALLOW_LIVE_INGEST)."
-  (:require [kotoba.lang.text] [kotoba.test :refer [deftest is testing]]
+  (:require [kotoba.bytes :as kbytes] [kotoba.lang.text] [kotoba.test :refer [deftest is testing]]
             [kouhou.governor :as governor]
             [kouhou.ingest :as ingest]
             [kouhou.live-fetch :as live-fetch]))
@@ -229,7 +229,7 @@
   (let [gzip-bytes (fn [^String s]
                      (let [bos (java.io.ByteArrayOutputStream.)]
                        (with-open [gz (java.util.zip.GZIPOutputStream. bos)]
-                         (.write gz (.getBytes s "UTF-8")))
+                         (.write gz (kbytes/utf8-bytes s)))
                        (.toByteArray bos)))
         decode #'live-fetch/decode-body
         feed "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel><item><title>x</title></item></channel></rss>"]
@@ -243,7 +243,7 @@
       (is (= feed (decode (gzip-bytes feed) nil))))
 
     (testing "a plain body is passed through unchanged"
-      (is (= feed (decode (.getBytes feed "UTF-8") nil))))
+      (is (= feed (decode (kbytes/utf8-bytes feed) nil))))
 
     (testing "and the result is what the parser can actually read — the bug
               was that it received compressed bytes and called them a format
