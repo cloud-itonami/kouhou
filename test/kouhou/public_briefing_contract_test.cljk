@@ -1,7 +1,7 @@
 (ns kouhou.public-briefing-contract-test
   "The canonical EDN Lexicon follows the executable publication boundary."
   (:require [clojure.edn :as edn]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [kouhou.publisher :as publisher]))
 
 (defn- contract []

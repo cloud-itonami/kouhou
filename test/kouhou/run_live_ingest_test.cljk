@@ -7,7 +7,7 @@
   of kawaraban's own `run_live_ingest_test.clj` (gates and pure transforms
   are unit-tested; real I/O edges are not mocked into a false sense of
   coverage)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kouhou.advisor :as advisor]
             [kouhou.operation :as op]
             [kouhou.publisher :as publisher]

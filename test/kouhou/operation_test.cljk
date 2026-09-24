@@ -2,7 +2,7 @@
   "End-to-end operation behavior — the autonomous-publication doctrine as tests:
   low-confidence still publishes (with a transparency tag), not blocked; a
   request with no source-url no-ops and is held."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [kouhou.store :as store]
             [kouhou.advisor :as advisor]

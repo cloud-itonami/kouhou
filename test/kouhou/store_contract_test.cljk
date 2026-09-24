@@ -2,7 +2,7 @@
   "MemStore ≡ DatomicStore contract — the same briefing record + ledger facts
   appear regardless of backend (in-process EAVT today; kotoba-server pod
   tomorrow). kouhou's analog of tashikame/tsumugu/sng store_contract_test."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kouhou.store :as store]))
 
 (deftest mem-and-datomic-agree-on-commit-and-ledger
