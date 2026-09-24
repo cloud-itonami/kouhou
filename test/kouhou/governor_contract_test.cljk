@@ -5,7 +5,7 @@
   unregistered-source / no-provenance / commercial-content / catastrophe-veto /
   no-actuation proposals are held (recorded as a hold, never published).
   Publication is autonomous by default (ADR-2606281500)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [kouhou.store :as store]
             [kouhou.advisor :as advisor]

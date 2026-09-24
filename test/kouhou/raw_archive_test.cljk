@@ -4,7 +4,7 @@
   does not? A receipt that only ever reports :ok is not evidence of custody,
   so the mismatch case is asserted by actually corrupting a byte."
   (:require [clojure.java.io :as io]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [kouhou.raw-archive :as sut])
   (:import (java.nio.file Files)
            (java.nio.file.attribute FileAttribute)))

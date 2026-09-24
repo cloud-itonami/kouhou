@@ -5,7 +5,7 @@
   passing case is asserted alongside it in the same test, because a detector
   that fails everything is equally useless."
   (:require [clojure.java.io :as io]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [kouhou.canonical :as canon]
             [kouhou.raw-archive :as raw]
             [kouhou.verify-corpus :as sut])
