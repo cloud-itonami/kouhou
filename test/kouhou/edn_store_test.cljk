@@ -6,20 +6,18 @@
   assertion in it is satisfied by the in-memory view. So the test that matters
   here builds a SECOND store over the same directory and asserts against that
   one; only bytes on disk can carry a value across that boundary."
-  (:require [clojure.java.io :as io]
+  (:require [kotoba.io :as io]
             [kotoba.lang.text :as str]
             [kotoba.test :refer [deftest is testing]]
             [kouhou.canonical :as canon]
             [kouhou.edn-store :as sut]
-            [kouhou.store :as store])
-  (:import (java.nio.file Files)
-           (java.nio.file.attribute FileAttribute)))
+            [kouhou.store :as store]))
 
 (defn- tmp-dir []
-  (str (Files/createTempDirectory "kouhou-edn-store" (into-array FileAttribute []))))
+  (str (io/temp-dir "kouhou-edn-store")))
 
 (defn- rm-rf [dir]
-  (doseq [f (reverse (file-seq (io/file dir)))] (.delete ^java.io.File f)))
+  (doseq [f (reverse (io/file-seq (io/file dir)))] (io/delete f)))
 
 (defn- fixed-clock
   "A clock that hands out successive instants, so shard bytes are
@@ -89,7 +87,7 @@
         (let [s (sut/edn-store dir {:clock (fixed-clock ["2026-08-11T08:30:00+09:00"])})]
           (store/append-ledger! s {:t :committed :source "s"})
           (is (= ["2026-08-10.edn"]
-                 (mapv #(.getName (io/file %)) (:ledger (sut/shard-paths s))))))
+                 (mapv #(io/file-name (io/file %)) (:ledger (sut/shard-paths s))))))
         (finally (rm-rf dir))))))
 
 (deftest bytes-are-canonical
