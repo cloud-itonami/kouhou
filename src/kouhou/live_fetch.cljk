@@ -27,7 +27,7 @@
   GET is refused unless this env var is set. Parsing text you already have is
   not a live fetch, so the pure parsing fns below have no gate; only
   `fetch-source!` (the #?(:clj) HTTP edge) checks it."
-  (:require #?(:clj [kotoba.net.jvm-host :as jvm-host])
+  (:require [kotoba.bytes :as kbytes] #?(:clj [kotoba.net.jvm-host :as jvm-host])
             [kotoba.lang.text :as str]
             [kouhou.ingest :as ingest]))
 
@@ -236,7 +236,7 @@
            in (if gz?
                 (java.util.zip.GZIPInputStream. (java.io.ByteArrayInputStream. body))
                 (java.io.ByteArrayInputStream. body))]
-       (String. (.readAllBytes in) java.nio.charset.StandardCharsets/UTF_8))))
+       (kbytes/utf8-string (.readAllBytes in)))))
 
 #?(:clj
    (defn jvm-http-get

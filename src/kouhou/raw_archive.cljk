@@ -42,7 +42,7 @@
   declaration rewritten to UTF-8 on the way in. Leaving it would produce an
   archive file that lies about itself — bytes in one encoding, a prolog naming
   another — which every XML parser downstream would then decode wrongly."
-  (:require [kotoba.bytes :as kbytes] [clojure.java.io :as io]
+  (:require [kotoba.bytes :as kbytes] [kotoba.io :as io]
             [kotoba.lang.text :as str])
   (:import (java.security MessageDigest)))
 
@@ -85,7 +85,7 @@
         f    (io/file raw-dir day (str (safe-name source-id) ".xml"))]
     (io/make-parents f)
     (with-open [o (io/output-stream f)] (.write o b))
-    {:path   (.getPath f)
+    {:path   (io/path f)
      :sha256 (sha256-hex b)
      :bytes  (alength b)}))
 
@@ -100,7 +100,7 @@
   [{:keys [path sha256 bytes] :as receipt}]
   (let [f (io/file path)]
     (cond
-      (not (.isFile f))
+      (not (io/file? f))
       {:status :absent :path path :receipt receipt}
 
       :else
