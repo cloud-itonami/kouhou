@@ -183,7 +183,7 @@
   "The single most-recent item in `items` (by :as-of, descending — parse-feed
   already sorts this way, this is just `first` with an empty-safe nil).
   kouhou's doctrine is aggregate-first / one run = one source digest (its own
-  CLAUDE.md + docs/adr/0001-architecture.md §3) — a live-ingest pass over a
+  AGENTS.md + docs/adr/0001-architecture.md §3) — a live-ingest pass over a
   multi-item feed proposes exactly ONE briefing candidate per source, not one
   per item, so it never becomes a flood-publisher just because the feed has
   many items."

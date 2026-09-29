@@ -227,5 +227,5 @@ KOUHOU_ALLOW_LIVE_INGEST=1 KOUHOU_PUBLISH=0 kbb -M:live-ingest
 
 - `docs/adr/0001-architecture.md` — design 正本.
 - `../../../90-docs/adr/2607022210-com-etzhayyim-kouhou-public-info-actor-r0.md` — superproject ADR.
-- `CLAUDE.md` — repo invariants / conventions.
+- `AGENTS.md` — repo invariants / conventions.
 - `MATURITY.md` — R0→R1 status, what's verified vs not, honesty ladder.
