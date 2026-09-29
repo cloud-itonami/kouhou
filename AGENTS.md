@@ -1,7 +1,7 @@
 # com-etzhayyim-kouhou
 
 kouhou (広報) — public-interest / public-sector information curator + social
-poster. See `README.md` for the core contract and full-repo `../../../CLAUDE.md`
+poster. See `README.md` for the core contract and full-repo `../../../AGENTS.md`
 "Actors" section for the pattern this follows (containment + independent
 governor + append-only ledger). Superproject decision record:
 `../../../90-docs/adr/2607022210-com-etzhayyim-kouhou-public-info-actor-r0.md`.

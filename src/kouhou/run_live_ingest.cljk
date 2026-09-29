@@ -15,7 +15,7 @@
 
   Aggregate-first, ONE run = ONE briefing PER SOURCE (kouhou's own doctrine —
   README.md 'Invariant' + 'StateGraph' sections, docs/adr/0001-architecture.md
-  §3, CLAUDE.md): `live-fetch/fetch-source!` already reduces each source's
+  §3, AGENTS.md): `live-fetch/fetch-source!` already reduces each source's
   feed down to its single most-recent item before it ever reaches the actor,
   so this entrypoint runs exactly one full `kouhou.operation` StateGraph
   execution (:advise -> :govern -> :decide -> :commit|:hold) per source per
